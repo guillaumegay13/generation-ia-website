@@ -1,0 +1,51 @@
+content/actu-ia-4.md
+  55207a8152c789a0 1-39
+content/comment-parler-ia.md
+  55207a8152c789a0 1-35
+content/actu-ia-1.md
+  55207a8152c789a0 1-37
+content/actu-ia-3.md
+  55207a8152c789a0 1-37
+content/coder-application-ia-zero.md
+  55207a8152c789a0 1-75
+content/tout-savoir-sur-claude-code.md
+  55207a8152c789a0 1-51
+content/actu-ia-5.md
+  55207a8152c789a0 1-33
+content/actu-ia-6.md
+  55207a8152c789a0 1-37
+content/actu-ia-2.md
+  55207a8152c789a0 1-35
+content/5-preuves-ia-generative-creative.md
+  55207a8152c789a0 1-33
+content/concurrents-chatgpt.md
+  55207a8152c789a0 1-45
+content/ou-en-est-ia-2026.md
+  55207a8152c789a0 1-45
+content/ia-vraiment-intelligentes.md
+  55207a8152c789a0 1-29
+content/chatgpt-mes-parents.md
+  55207a8152c789a0 1-43
+app/articles/[slug]/page.tsx
+  55207a8152c789a0 4-5,7-47,55,63-144,149,166-167
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "a847404b09469a339d14097f50a1f1f2dfafd380",
+  "prompts": {
+    "55207a8152c789a0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "decfa3d8-424f-4bfa-9c53-a20a0627de09",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Guillaume Gay",
+      "messages": [],
+      "total_additions": 705,
+      "total_deletions": 9,
+      "accepted_lines": 705,
+      "overriden_lines": 0
+    }
+  }
+}
