@@ -1,0 +1,29 @@
+app/page.tsx
+  55207a8152c789a0 2,4-114,118-146,148-152,154-157,159-182
+app/articles/[slug]/page.tsx
+  55207a8152c789a0 1-48
+app/layout.tsx
+  55207a8152c789a0 16-36,46,49
+app/globals.css
+  55207a8152c789a0 4-10,16-17
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.8",
+  "base_commit_sha": "8a87811f3eda5b09e1c269f88827f9786ee53bbb",
+  "prompts": {
+    "55207a8152c789a0": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "decfa3d8-424f-4bfa-9c53-a20a0627de09",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Guillaume Gay",
+      "messages": [],
+      "total_additions": 0,
+      "total_deletions": 0,
+      "accepted_lines": 255,
+      "overriden_lines": 0
+    }
+  }
+}
