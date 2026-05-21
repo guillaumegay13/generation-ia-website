@@ -1,0 +1,26 @@
+content/intelligence-artificielle-et-moi.md
+  s_3489a378196c37::t_b41fa4f732381a 1-57
+content/ia-service-entreprises-thibault-fritsch.md
+  s_3489a378196c37::t_6779f1c535cc7c 1-119
+content/gerer-entreprise-agent-ia.md
+  s_3489a378196c37::t_2efc0b7e2a419a 1-51
+app/page.tsx
+  s_3489a378196c37::t_44b1db150f1903 6-19
+  s_3489a378196c37::t_e14a430bdc2a79 113
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "dbc67977b6795876c387dc733e239faba37cd6c1",
+  "prompts": {},
+  "sessions": {
+    "s_3489a378196c37": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b583e45d-4a25-40cb-b2e4-2f421a7fad80",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
