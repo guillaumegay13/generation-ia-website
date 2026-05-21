@@ -1,0 +1,30 @@
+package.json
+  s_3489a378196c37::t_1b9aa0e530ff81 24
+tsconfig.json
+  s_3489a378196c37::t_1b9aa0e530ff81 4-8,26-28,39-41
+app/page.tsx
+  s_3489a378196c37::t_62de36a1589063 3
+  s_3489a378196c37::t_c9052f42a9bfb6 113-114
+  s_3489a378196c37::t_ec3a02192dbadb 122-123
+app/components/PlatformLinks.tsx
+  s_3489a378196c37::t_9c6ddd893f01bc 1-75
+app/articles/[slug]/page.tsx
+  s_3489a378196c37::t_2cb8875b27a48f 6
+  s_3489a378196c37::t_49468551eac3b4 168-172
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.4.11",
+  "base_commit_sha": "be8faa8ad81b939ce14f46502faf219535fea195",
+  "prompts": {},
+  "sessions": {
+    "s_3489a378196c37": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "b583e45d-4a25-40cb-b2e4-2f421a7fad80",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
