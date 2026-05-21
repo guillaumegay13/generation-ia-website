@@ -35,24 +35,6 @@ const PLATFORMS = [
       </svg>
     ),
   },
-  {
-    name: "Pocket Casts",
-    url: "https://pocketcasts.com/podcast/g%C3%A9n%C3%A9ration-ia/4e1be740-2895-013e-e07d-0e1ab590d6db",
-    icon: (
-      <svg viewBox="0 0 24 24" className="size-5 fill-current">
-        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 19.2A7.2 7.2 0 1 1 19.2 12h-2.4a4.8 4.8 0 1 0-4.8 4.8v2.4z" />
-      </svg>
-    ),
-  },
-  {
-    name: "RSS",
-    url: "https://media.rss.com/generation-ia/feed.xml",
-    icon: (
-      <svg viewBox="0 0 24 24" className="size-5 fill-current">
-        <path d="M6.503 20.752c0 1.794-1.456 3.248-3.251 3.248-1.796 0-3.252-1.454-3.252-3.248 0-1.794 1.456-3.248 3.252-3.248 1.795.001 3.251 1.454 3.251 3.248Zm-6.503-12.572v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817c-.062-8.71-7.118-15.758-15.839-15.82Zm0-8.18v4.819c10.781.075 19.51 8.796 19.586 19.581h4.815c-.075-13.493-11.012-24.413-24.401-24.4Z" />
-      </svg>
-    ),
-  },
 ];
 
 export default function PlatformLinks() {
