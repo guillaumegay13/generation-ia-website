@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
+import PlatformLinks from "../../components/PlatformLinks";
 
 type Article = {
   title: string;
@@ -164,7 +165,11 @@ export default async function ArticlePage({ params }: Props) {
         {article.title}
       </h1>
       <p className="mt-2 text-sm text-muted">{formatDate(article.date)}</p>
-      <div className="mt-8">{renderContent(article.content)}</div>
+      <div className="mt-8">
+        <p className="mb-4 text-sm text-muted">Écouter sur :</p>
+        <PlatformLinks />
+      </div>
+      <div className="mt-10">{renderContent(article.content)}</div>
     </article>
   );
 }
