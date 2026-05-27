@@ -4,6 +4,11 @@ import PlatformLinks from "./components/PlatformLinks";
 
 const EPISODES = [
   {
+    title: "Comment évaluer une IA ? Avec Stéphane Collot (ex-Meta)",
+    date: "27 mai 2026",
+    slug: "comment-evaluer-ia-stephane-collot",
+  },
+  {
     title: "L'IA au service des entreprises - avec Thibault Fritsch",
     date: "5 mai 2026",
     slug: "ia-service-entreprises-thibault-fritsch",
