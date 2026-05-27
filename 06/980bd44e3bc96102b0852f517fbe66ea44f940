@@ -1,0 +1,23 @@
+app/page.tsx
+  s_1b468026759c14::t_18e5c16022d44b 7-10
+content/comment-evaluer-ia-stephane-collot.md
+  s_1b468026759c14::t_89f06ec7715ebd 111
+  s_1b468026759c14::t_06785ae2a9bcbb 1-104,106-110,112-169
+  s_1b468026759c14::t_1532592ac9d1e3 105
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "06980bd44e3bc96102b0852f517fbe66ea44f940",
+  "prompts": {},
+  "sessions": {
+    "s_1b468026759c14": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "db51bd7b-4ce6-46d7-891c-00ff61e0cbe0",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
