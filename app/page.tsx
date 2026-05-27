@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import PlatformLinks from "./components/PlatformLinks";
+import { YOUTUBE_LINKS, YouTubeIcon } from "./youtube";
 
 const EPISODES = [
   {
@@ -133,17 +134,32 @@ export default function Home() {
       <section className="mx-auto w-full max-w-2xl px-6 pb-20">
         <h2 className="text-2xl font-semibold mb-6">Épisodes</h2>
         <ol className="flex flex-col divide-y divide-card-border">
-          {EPISODES.map((ep) => (
-            <li key={ep.slug}>
-              <Link
-                href={`/articles/${ep.slug}`}
-                className="flex flex-col gap-1 py-4 transition-colors hover:text-accent-light"
-              >
-                <span className="font-medium leading-snug">{ep.title}</span>
-                <span className="text-sm text-muted">{ep.date}</span>
-              </Link>
-            </li>
-          ))}
+          {EPISODES.map((ep) => {
+            const youtube = YOUTUBE_LINKS[ep.slug];
+            return (
+              <li key={ep.slug} className="flex items-center gap-3">
+                <Link
+                  href={`/articles/${ep.slug}`}
+                  className="flex flex-1 flex-col gap-1 py-4 transition-colors hover:text-accent-light"
+                >
+                  <span className="font-medium leading-snug">{ep.title}</span>
+                  <span className="text-sm text-muted">{ep.date}</span>
+                </Link>
+                {youtube && (
+                  <a
+                    href={youtube}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Regarder « ${ep.title} » sur YouTube`}
+                    title="Regarder sur YouTube"
+                    className="shrink-0 text-muted transition-colors hover:text-[#ff0000]"
+                  >
+                    <YouTubeIcon className="size-6 fill-current" />
+                  </a>
+                )}
+              </li>
+            );
+          })}
         </ol>
       </section>
 

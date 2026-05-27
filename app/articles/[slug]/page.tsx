@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import fs from "fs";
 import path from "path";
 import PlatformLinks from "../../components/PlatformLinks";
+import { YOUTUBE_LINKS, YouTubeIcon } from "../../youtube";
 
 type Article = {
   title: string;
@@ -168,6 +169,17 @@ export default async function ArticlePage({ params }: Props) {
       <div className="mt-8">
         <p className="mb-4 text-sm text-muted">Écouter sur :</p>
         <PlatformLinks />
+        {YOUTUBE_LINKS[slug] && (
+          <a
+            href={YOUTUBE_LINKS[slug]}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#ff0000] px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+          >
+            <YouTubeIcon className="size-5 fill-current" />
+            Regarder l&apos;épisode sur YouTube
+          </a>
+        )}
       </div>
       <div className="mt-10">{renderContent(article.content)}</div>
     </article>
