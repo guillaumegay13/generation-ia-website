@@ -1,0 +1,24 @@
+app/articles/[slug]/page.tsx
+  s_d4dd5c470c10d8::t_a935bc60e51bd8 7
+  s_d4dd5c470c10d8::t_d42f9c27ef3b5a 172-182
+app/youtube.tsx
+  s_d4dd5c470c10d8::t_7a1b666c4f394e 1-30
+app/page.tsx
+  s_d4dd5c470c10d8::t_05b8e805b12955 4,141-142,144-146,160
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.2",
+  "base_commit_sha": "ce2964168c56ac64bf54832f1461524aa10b1112",
+  "prompts": {},
+  "sessions": {
+    "s_d4dd5c470c10d8": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "e3f86ffa-acde-4c46-be6a-229424e037f8",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
