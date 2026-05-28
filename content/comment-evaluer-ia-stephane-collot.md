@@ -4,7 +4,15 @@ date: "2026-05-27"
 description: "Comment évaluer une IA ? Avec Stéphane Collot (ex-Meta)"
 ---
 
-Dans ce nouvel épisode de Génération IA, je reçois Stéphane Collot, qui a passé plus de trois ans chez Meta à Londres où il a contribué aux modèles Llama, avant de démissionner pour lancer sa propre startup d'IA appliquée aux marchés financiers. Au programme : la différence entre IA générative et machine learning « classique », pourquoi Meta a publié Llama en open source, les coulisses de la réorganisation de l'IA chez Meta (Scale AI, Alexandr Wang, le départ de Yann LeCun), comment on évalue réellement un modèle (benchmarks, LLM-as-a-judge, contamination des données), et son projet de hedge fund systématique fondé sur le deep learning.
+Dans ce nouvel épisode de Génération IA, nous avons la chance de recevoir Stéphane Collot. Stéphane est un expert du machine learning et a commencé sa carrière dans le secteur bancaire avant d'aller chez Meta où il contribue activement au développement des modèles d'IA génératives Llama. Il nous partage son expérience et explique comment évaluer efficacement une intelligence artificielle.
+
+Suivez Stéphane sur LinkedIn : [https://www.linkedin.com/in/stephanecollot](https://www.linkedin.com/in/stephanecollot)
+
+Le projet VibeBob open source : [https://github.com/stephanecollot/VibeBob](https://github.com/stephanecollot/VibeBob)
+
+Tu as quelqu'un chose d'intéressant à partager sur l'IA générative ? Contacte moi : guillaume.gay@protonmail.com
+
+N'hésitez pas à mettre 5 étoiles au podcast si vous voulez le soutenir et avoir d'autres invités !
 
 *Transcription brute générée automatiquement par Whisper — peut contenir des imprécisions.*
 
