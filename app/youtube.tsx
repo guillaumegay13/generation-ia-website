@@ -1,6 +1,7 @@
 // YouTube video link per episode (slug -> watch URL).
 // Single source of truth shared by the homepage list and article pages.
 export const YOUTUBE_LINKS: Record<string, string> = {
+  "cout-ia-entreprise-benjamin-drighes": "https://youtu.be/DiRC-7vmL0M",
   "comment-evaluer-ia-stephane-collot": "https://youtu.be/M58gvU2xlhY",
   "ia-service-entreprises-thibault-fritsch": "https://youtu.be/4OlWf_Vj6U4",
   "gerer-entreprise-agent-ia": "https://youtu.be/z8Dqli1KbrQ",

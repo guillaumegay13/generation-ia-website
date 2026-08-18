@@ -5,6 +5,31 @@ import { YOUTUBE_LINKS, YouTubeIcon } from "./youtube";
 
 const EPISODES = [
   {
+    title: "Le comeback des modèles open source américains ? (Meta, Thinking Machines, Grok..)",
+    date: "17 août 2026",
+    slug: "comeback-modeles-open-source-americains",
+  },
+  {
+    title: "Les derniers avancements de l'IA générative 🤯",
+    date: "5 août 2026",
+    slug: "derniers-avancements-ia-generative",
+  },
+  {
+    title: "La guerre de l'intelligence : États-Unis vs Chine",
+    date: "9 juillet 2026",
+    slug: "guerre-intelligence-usa-chine",
+  },
+  {
+    title: "Comment gérer le coût de l'IA pour une entreprise ? Avec Benjamin Drighès",
+    date: "18 juin 2026",
+    slug: "cout-ia-entreprise-benjamin-drighes",
+  },
+  {
+    title: "On fait le point sur l'IA et le podcast ! Claude Fable 5, Génération IA, Modèle Routing",
+    date: "11 juin 2026",
+    slug: "point-ia-podcast-claude-fable-5",
+  },
+  {
     title: "Comment évaluer une IA ? Avec Stéphane Collot (ex-Meta)",
     date: "27 mai 2026",
     slug: "comment-evaluer-ia-stephane-collot",
