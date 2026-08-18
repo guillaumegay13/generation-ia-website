@@ -1,0 +1,42 @@
+app/page.tsx
+  s_a24b83e15b87da::t_4e36e4812578d5 7-31
+content/derniers-avancements-ia-generative.md
+  s_39c04e17040961::t_d4336a0704a5cb 1-86
+content/guerre-intelligence-usa-chine.md
+  s_39c04e17040961::t_df5f3c99ee2ff9 1-18,20,22-24,26,28,30,32-34,36,38,40,42,44,46,48-50,52,54,56,58,60-63
+  s_39c04e17040961::t_e64b9e302be2eb 19,21,25,27,31,35,37,39,41,43,45,47,51,53,57,59
+  s_39c04e17040961::t_ad001a07339968 29,55
+content/point-ia-podcast-claude-fable-5.md
+  s_39c04e17040961::t_7933e0038ebaab 1-95
+content/cout-ia-entreprise-benjamin-drighes.md
+  s_39c04e17040961::t_0001e7b4d17738 1-171
+app/youtube.tsx
+  s_a24b83e15b87da::t_bbd9cdd0f68ad6 4
+content/comeback-modeles-open-source-americains.md
+  s_39c04e17040961::t_cd5167e4465c63 37,39,43,45
+  s_39c04e17040961::t_1fbf0548353bbd 1-36,38,40-42,44,46-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.22",
+  "base_commit_sha": "f110125066e17679e317fdac3fd4f132836b45eb",
+  "prompts": {},
+  "sessions": {
+    "s_39c04e17040961": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "4933f8c5-4620-4264-8ebc-cdc8963701e3",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    },
+    "s_a24b83e15b87da": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "07d355d4-9f52-4784-ac6e-4b0c36d1fbac",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
