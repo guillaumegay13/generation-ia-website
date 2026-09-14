@@ -5,6 +5,11 @@ import { YOUTUBE_LINKS, YouTubeIcon } from "./youtube";
 
 const EPISODES = [
   {
+    title: "Ce que j'ai vu à San Francisco sur le développement de l'IA",
+    date: "2 septembre 2026",
+    slug: "san-francisco-developpement-ia",
+  },
+  {
     title: "Le comeback des modèles open source américains ? (Meta, Thinking Machines, Grok..)",
     date: "17 août 2026",
     slug: "comeback-modeles-open-source-americains",
