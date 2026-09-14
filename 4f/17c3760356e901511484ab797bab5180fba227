@@ -1,0 +1,22 @@
+app/page.tsx
+  s_50a55441ac91dd::t_af7d9cb326606b 8-11
+  s_50a55441ac91dd::t_efbd65e35c2b40 7
+content/san-francisco-developpement-ia.md
+  s_50a55441ac91dd::t_2fda546e9b176b 1-55
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "4f17c3760356e901511484ab797bab5180fba227",
+  "prompts": {},
+  "sessions": {
+    "s_50a55441ac91dd": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "51bbd612-d2be-424f-bb0a-e62090773bc5",
+        "model": "claude-opus-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
