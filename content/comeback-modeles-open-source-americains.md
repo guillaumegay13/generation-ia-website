@@ -6,7 +6,7 @@ description: "Le comeback des modèles open source américains ? (Meta, Thinking
 
 Face à la pression des modèles open source chinois qui grappillent des parts de marché, les entreprises américaines se recentrent sur l'open source afin de les concurrencer. Meta, Thinking Machines, Grok : on fait le point sur ce comeback.
 
-Rejoins le Discord : [https://discord.gg/CqUzSvEkB](https://discord.gg/CqUzSvEkB)
+Rejoins le Discord : [https://discord.gg/UvhcUyvbn](https://discord.gg/UvhcUyvbn)
 
 N'hésitez pas à mettre 5 étoiles au podcast si vous voulez le soutenir !
 

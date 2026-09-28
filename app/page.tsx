@@ -5,6 +5,11 @@ import { YOUTUBE_LINKS, YouTubeIcon } from "./youtube";
 
 const EPISODES = [
   {
+    title: "L'IA va-t-elle anéantir l'humanité ?",
+    date: "22 septembre 2026",
+    slug: "ia-aneantir-humanite",
+  },
+  {
     title: "Ce que j'ai vu à San Francisco sur le développement de l'IA",
     date: "2 septembre 2026",
     slug: "san-francisco-developpement-ia",

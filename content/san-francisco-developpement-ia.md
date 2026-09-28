@@ -6,7 +6,7 @@ description: "Ce que j'ai vu à San Francisco sur le développement de l'IA"
 
 Dans ce nouvel épisode, je vous partage tout ce que j'ai vu lors de mon récent voyage à San Francisco, où j'ai pu me confronter aux meilleurs ingénieurs IA au monde. Je reviens également sur les récentes actualités de l'IA, notamment le rachat de Hugging Face par NVIDIA.
 
-Rejoins le Discord : [https://discord.gg/CqUzSvEkB](https://discord.gg/CqUzSvEkB)
+Rejoins le Discord : [https://discord.gg/UvhcUyvbn](https://discord.gg/UvhcUyvbn)
 
 N'hésitez pas à mettre 5 étoiles au podcast si vous voulez le soutenir !
 
