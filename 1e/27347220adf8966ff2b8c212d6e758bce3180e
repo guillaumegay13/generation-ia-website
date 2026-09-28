@@ -1,0 +1,27 @@
+app/page.tsx
+  s_39433692d7cf60::t_4def95f38b1a96 7-11
+content/comeback-modeles-open-source-americains.md
+  s_39433692d7cf60::t_181682326f5c0a 9
+content/derniers-avancements-ia-generative.md
+  s_39433692d7cf60::t_d575b69c69da16 9
+content/ia-aneantir-humanite.md
+  s_39433692d7cf60::t_3b8ec35da23f80 1-53
+content/san-francisco-developpement-ia.md
+  s_39433692d7cf60::t_4c229d30311c49 9
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1e27347220adf8966ff2b8c212d6e758bce3180e",
+  "prompts": {},
+  "sessions": {
+    "s_39433692d7cf60": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8f46932e-0026-4a0b-94fd-6086822ce5b1",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
