@@ -1,0 +1,19 @@
+.superset/config.json
+  s_39433692d7cf60::t_a5e36b8e926e7c 1-7
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1364f2df1ebabea4e7881cb80fa314b69c89f618",
+  "prompts": {},
+  "sessions": {
+    "s_39433692d7cf60": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "8f46932e-0026-4a0b-94fd-6086822ce5b1",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
