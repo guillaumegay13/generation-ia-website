@@ -1,0 +1,7 @@
+{
+  "setup": [
+    "npm ci",
+    "for f in \"$SUPERSET_ROOT_PATH\"/.env*; do [ -f \"$f\" ] && cp -n \"$f\" .; done; true"
+  ],
+  "run": ["npm run dev"]
+}
