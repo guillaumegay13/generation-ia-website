@@ -5,6 +5,11 @@ import { YOUTUBE_LINKS, YouTubeIcon } from "./youtube";
 
 const EPISODES = [
   {
+    title: "Entreprendre à l'ère de l'IA - avec Vincent Godbert",
+    date: "6 octobre 2026",
+    slug: "entreprendre-ere-ia-vincent-godbert",
+  },
+  {
     title: "L'IA va-t-elle anéantir l'humanité ?",
     date: "22 septembre 2026",
     slug: "ia-aneantir-humanite",
