@@ -1,0 +1,111 @@
+app/components/ShareButton.tsx
+  s_dafd9aef4e15db::t_d0e38f5635da47 1-29
+  s_dafd9aef4e15db::t_6cf9c4f28a00e0 30
+app/components/Footer.tsx
+  s_dafd9aef4e15db::t_11e538297383e2 1-9
+app/articles/[slug]/page.tsx
+  s_dafd9aef4e15db::t_2e3432dbe96981 3-14,17,22-23,25-26,35-36,38,41-88,90-92
+app/page.tsx
+  s_dafd9aef4e15db::t_f9fee4243a7630 3-5,7-9,11-12,14,16-59,61-64,66-96,99-134,136
+app/components/YouTubePlayer.tsx
+  s_dafd9aef4e15db::t_d85b092dd72b78 1-71
+  s_dafd9aef4e15db::t_fddc7fe9301a19 72
+app/components/Hero.tsx
+  s_dafd9aef4e15db::t_b2aa6efda984f4 1-24,27-63
+  s_dafd9aef4e15db::t_45763ed33524c5 25-26
+app/components/icons.tsx
+  s_dafd9aef4e15db::t_9df8a0bdd7120e 1-33
+app/components/Markdown.tsx
+  s_dafd9aef4e15db::t_bfb54aa3f9d293 1-48
+lib/episodes.ts
+  s_dafd9aef4e15db::t_5473214979dd78 1-88
+app/globals.css
+  s_dafd9aef4e15db::t_94f90975d9b79c 3-7,9-36,42-74
+app/components/TopBar.tsx
+  s_dafd9aef4e15db::t_40eaf608838d8f 1-48
+  s_dafd9aef4e15db::t_7907bfc5779fd3 49
+AGENTS.md
+  s_dafd9aef4e15db::t_90883e0e8c9acd 6-25
+app/components/PlatformLinks.tsx
+  s_dafd9aef4e15db::t_39fe26e8959739 1-2,5,35-38,40-76,83-85,87
+app/components/ui.ts
+  s_dafd9aef4e15db::t_ddde27e99ac3cd 1-12
+app/layout.tsx
+  s_dafd9aef4e15db::t_d06806019ac0c0 3,6-7,11-13,49
+content/5-preuves-ia-generative-creative.md
+  s_dafd9aef4e15db::t_ce54dacd0f0f09 4
+content/actu-ia-1.md
+  s_dafd9aef4e15db::t_21c9243e6aade1 4
+content/actu-ia-2.md
+  s_dafd9aef4e15db::t_26ccbc19b1c8cf 4
+content/actu-ia-3.md
+  s_dafd9aef4e15db::t_2df7f6ce1e8b33 4
+content/actu-ia-4.md
+  s_dafd9aef4e15db::t_8e0dcbce0d1287 4
+content/actu-ia-5.md
+  s_dafd9aef4e15db::t_0b82751c83c743 4
+content/actu-ia-6.md
+  s_dafd9aef4e15db::t_d77562d8e54d06 4
+content/annee-bascule-ia-2026.md
+  s_dafd9aef4e15db::t_c1c51a1eefccc0 4
+content/chatgpt-mes-parents.md
+  s_dafd9aef4e15db::t_46f055871ecf52 4
+content/coder-application-ia-zero.md
+  s_dafd9aef4e15db::t_dbc50d58f4074e 4
+content/comeback-modeles-open-source-americains.md
+  s_dafd9aef4e15db::t_0f7a93b88c2c27 4
+content/comment-evaluer-ia-stephane-collot.md
+  s_dafd9aef4e15db::t_48c8c005dfe58f 4
+content/comment-parler-ia.md
+  s_dafd9aef4e15db::t_fa226830e506f3 4
+content/concurrents-chatgpt.md
+  s_dafd9aef4e15db::t_644d614a28a151 4
+content/cout-ia-entreprise-benjamin-drighes.md
+  s_dafd9aef4e15db::t_d6f4c02d97b31c 4
+content/derniers-avancements-ia-generative.md
+  s_dafd9aef4e15db::t_dc05a19d4c021b 4
+content/entreprendre-ere-ia-vincent-godbert.md
+  s_dafd9aef4e15db::t_741f2cd5677bc3 4
+content/gerer-entreprise-agent-ia.md
+  s_dafd9aef4e15db::t_0c446fc3636ccd 4
+content/guerre-intelligence-usa-chine.md
+  s_dafd9aef4e15db::t_461a8f9be5767a 4
+content/ia-aneantir-humanite.md
+  s_dafd9aef4e15db::t_028a2de57227ad 4
+content/ia-bouleverse-recherche-laurent-daudet.md
+  s_dafd9aef4e15db::t_35e669b113cf96 4
+content/ia-service-entreprises-thibault-fritsch.md
+  s_dafd9aef4e15db::t_8ffe23322664cf 4
+content/ia-vraiment-intelligentes.md
+  s_dafd9aef4e15db::t_2e13ac49192f5c 4
+content/intelligence-artificielle-et-moi.md
+  s_dafd9aef4e15db::t_cb98dbfa5a6425 4
+content/job-remplace-ia-christophe-aulnette.md
+  s_dafd9aef4e15db::t_ae824f3e2d44ca 4
+content/ou-en-est-ia-2026.md
+  s_dafd9aef4e15db::t_47abe48c74506e 4
+content/point-ia-podcast-claude-fable-5.md
+  s_dafd9aef4e15db::t_9ad7d12a81d8c4 4
+content/san-francisco-developpement-ia.md
+  s_dafd9aef4e15db::t_2fc43be91c1f5b 4
+content/tout-savoir-sur-claude-code.md
+  s_dafd9aef4e15db::t_3ee21f87398f99 4
+next.config.ts
+  s_dafd9aef4e15db::t_b035dd0a187dc5 4-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d75a416b95b6379349700b6fb3681496b212ae91",
+  "prompts": {},
+  "sessions": {
+    "s_dafd9aef4e15db": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2e6f1e6a-3b67-4980-ac02-3abaacc899b5",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
