@@ -23,16 +23,25 @@ export default function MentionsLegales() {
       <p>Directeur de la publication : {HOST_NAME}.</p>
 
       <h2>Hébergement</h2>
-      <p>
-        Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis —{" "}
-        <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
-          vercel.com
-        </a>
-        .
-      </p>
-      <p>
-        Les épisodes audio sont hébergés par RSS.com, et les vidéos par YouTube (Google).
-      </p>
+      <ul>
+        <li>
+          <strong>Podcast (épisodes audio et flux RSS)</strong> : RSS America, LLC (RSS.com) —{" "}
+          <a href="https://rss.com" target="_blank" rel="noopener noreferrer">
+            rss.com
+          </a>{" "}
+          — <a href="mailto:support@rss.com">support@rss.com</a>.
+        </li>
+        <li>
+          <strong>Site web</strong> : Vercel Inc., 440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis —{" "}
+          <a href="https://vercel.com" target="_blank" rel="noopener noreferrer">
+            vercel.com
+          </a>
+          .
+        </li>
+        <li>
+          <strong>Vidéos</strong> : YouTube (Google).
+        </li>
+      </ul>
 
       <h2>Propriété intellectuelle</h2>
       <p>
