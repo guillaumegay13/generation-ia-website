@@ -168,7 +168,7 @@ export default async function ArticlePage({ params }: Props) {
       <p className="mt-2 text-sm text-muted">{formatDate(article.date)}</p>
       <div className="mt-8">
         <p className="mb-4 text-sm text-muted">Écouter sur :</p>
-        <PlatformLinks />
+        <PlatformLinks align="start" />
         {YOUTUBE_LINKS[slug] && (
           <a
             href={YOUTUBE_LINKS[slug]}

@@ -37,9 +37,15 @@ const PLATFORMS = [
   },
 ];
 
-export default function PlatformLinks() {
+export default function PlatformLinks({
+  align = "center",
+}: {
+  align?: "center" | "start";
+}) {
   return (
-    <div className="flex flex-wrap justify-center gap-3">
+    <div
+      className={`flex flex-wrap gap-3 ${align === "start" ? "justify-start" : "justify-center"}`}
+    >
       {PLATFORMS.map((p) => (
         <a
           key={p.name}
