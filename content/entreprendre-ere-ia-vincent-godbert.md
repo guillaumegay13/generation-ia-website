@@ -1,6 +1,7 @@
 ---
 title: "Entreprendre à l'ère de l'IA - avec Vincent Godbert"
 date: "2026-10-06"
+duration: 54
 description: "Entreprendre à l'ère de l'IA - avec Vincent Godbert"
 ---
 

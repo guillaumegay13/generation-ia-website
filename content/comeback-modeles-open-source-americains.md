@@ -1,6 +1,7 @@
 ---
 title: "Le comeback des modèles open source américains ? (Meta, Thinking Machines, Grok..)"
 date: "2026-08-17"
+duration: 25
 description: "Le comeback des modèles open source américains ? (Meta, Thinking Machines, Grok..)"
 ---
 

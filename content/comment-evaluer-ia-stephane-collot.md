@@ -1,6 +1,7 @@
 ---
 title: "Comment évaluer une IA ? Avec Stéphane Collot (ex-Meta)"
 date: "2026-05-27"
+duration: 61
 description: "Comment évaluer une IA ? Avec Stéphane Collot (ex-Meta)"
 ---
 

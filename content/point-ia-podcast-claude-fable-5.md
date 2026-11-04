@@ -1,6 +1,7 @@
 ---
 title: "On fait le point sur l'IA et le podcast ! Claude Fable 5, Génération IA, Modèle Routing"
 date: "2026-06-11"
+duration: 26
 description: "On fait le point sur l'IA et le podcast ! Claude Fable 5, Génération IA, Modèle Routing"
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Ton job remplacé par l'IA ? Comment te protéger - avec Christophe Aulnette"
 date: "2026-10-21"
+duration: 71
 description: "Ton job remplacé par l'IA ? Comment te protéger - avec Christophe Aulnette"
 ---
 

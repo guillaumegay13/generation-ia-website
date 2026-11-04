@@ -1,6 +1,7 @@
 ---
 title: "Actu IA #4 : Mistral Agents, MyTrainer, Veo 3, Coût de l'IA, Évaluation des modèles"
 date: "2025-06-12"
+duration: 36
 description: "Actu IA #4 : Mistral Agents, MyTrainer, Veo 3, Coût de l'IA, Évaluation des modèles"
 ---
 

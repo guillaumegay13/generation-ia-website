@@ -1,6 +1,7 @@
 ---
 title: "L'intelligence artificielle et moi"
 date: "2026-04-20"
+duration: 61
 description: "L'intelligence artificielle et moi"
 ---
 

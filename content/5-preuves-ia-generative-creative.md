@@ -1,6 +1,7 @@
 ---
 title: "5 preuves que l'IA générative est créative"
 date: "2025-05-12"
+duration: 34
 description: "5 preuves que l'IA générative est créative"
 ---
 

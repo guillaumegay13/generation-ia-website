@@ -1,6 +1,8 @@
+import { ExternalIcon } from "./icons";
+
 // Brand marks from Simple Icons (CC0). Deezer uses its equalizer mark in the
 // current brand purple.
-const PLATFORMS = [
+export const PLATFORMS = [
   {
     name: "Apple Podcasts",
     url: "https://podcasts.apple.com/us/podcast/g%C3%A9n%C3%A9ration-ia/id1811120641",
@@ -30,38 +32,59 @@ const PLATFORMS = [
   },
 ];
 
-export default function PlatformLinks({
-  layout = "row",
-}: {
-  layout?: "row" | "stack";
-}) {
-  const stack = layout === "stack";
+
+type Platform = (typeof PLATFORMS)[number];
+
+function BrandMark({ p, colored }: { p: Platform; colored: boolean }) {
   return (
-    <div
-      className={
-        stack
-          ? "flex w-full max-w-xs flex-col gap-3"
-          : "flex flex-wrap justify-center gap-3"
-      }
-    >
+    <svg viewBox="0 0 24 24" aria-hidden className="size-[22px] shrink-0">
+      {colored && "backdrop" in p && <path d={p.backdrop} fill="#fff" />}
+      <path
+        d={p.path}
+        className={colored ? undefined : "fill-current transition-colors group-hover:fill-(--brand)"}
+        style={colored ? { fill: p.color } : ({ "--brand": p.color } as React.CSSProperties)}
+      />
+    </svg>
+  );
+}
+
+/**
+ * "icons": compact grey marks that take their brand color on hover (show header).
+ * "list": labelled rows with colored marks (episode sidebar).
+ */
+export default function PlatformLinks({ variant = "icons" }: { variant?: "icons" | "list" }) {
+  if (variant === "list") {
+    return (
+      <div className="flex flex-col gap-0.5">
+        {PLATFORMS.map((p) => (
+          <a
+            key={p.name}
+            href={p.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="-mx-3 flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-semibold transition-colors hover:bg-surface-hover"
+          >
+            <BrandMark p={p} colored />
+            {p.name}
+            <ExternalIcon className="ml-auto size-4 text-faint" />
+          </a>
+        ))}
+      </div>
+    );
+  }
+  return (
+    <div className="flex gap-1.5">
       {PLATFORMS.map((p) => (
         <a
           key={p.name}
           href={p.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-3 rounded-full border border-card-border bg-card px-4 py-2.5 text-sm font-medium text-foreground transition-colors hover:border-accent hover:text-accent-light"
+          title={p.name}
+          aria-label={p.name}
+          className="group grid size-10 place-items-center rounded-full text-subdued transition-colors hover:bg-surface-hover hover:text-foreground"
         >
-          <svg
-            viewBox="0 0 24 24"
-            aria-hidden
-            className="size-5 shrink-0"
-            style={{ fill: p.color }}
-          >
-            {"backdrop" in p && <path d={p.backdrop} fill="#fff" />}
-            <path d={p.path} />
-          </svg>
-          {p.name}
+          <BrandMark p={p} colored={false} />
         </a>
       ))}
     </div>

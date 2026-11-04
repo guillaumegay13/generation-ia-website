@@ -1,6 +1,7 @@
 ---
 title: "Comment parler à l'intelligence artificielle ?"
 date: "2025-05-05"
+duration: 37
 description: "Comment parler à l'intelligence artificielle ?"
 ---
 

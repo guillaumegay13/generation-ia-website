@@ -1,6 +1,7 @@
 ---
 title: "Actu IA #6 : Lovable, Meta Superintelligence Lab, Modèles Chinois, gpt-oss, Veo 3"
 date: "2025-08-07"
+duration: 31
 description: "Actu IA #6 : Lovable, Meta Superintelligence Lab, Modèles Chinois, gpt-oss, Veo 3"
 ---
 

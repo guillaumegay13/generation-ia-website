@@ -1,6 +1,7 @@
 ---
 title: "L'IA va-t-elle anéantir l'humanité ?"
 date: "2026-09-22"
+duration: 24
 description: "L'IA va-t-elle anéantir l'humanité ?"
 ---
 

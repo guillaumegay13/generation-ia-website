@@ -1,6 +1,7 @@
 ---
 title: "Coder une application grâce à l'IA en partant de zéro ? Avec Frédéric"
 date: "2025-05-10"
+duration: 70
 description: "Coder une application grâce à l'IA en partant de zéro ? Avec Frédéric"
 ---
 

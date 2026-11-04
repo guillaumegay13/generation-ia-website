@@ -1,6 +1,7 @@
 ---
 title: "2026 : l'année de bascule de l'IA ?"
 date: "2026-11-02"
+duration: 33
 description: "2026 : l'année de bascule de l'IA ?"
 ---
 

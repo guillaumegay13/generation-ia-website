@@ -1,6 +1,7 @@
 ---
 title: "Actu IA #3 : \"Gadget\" IA, Claude 4, Vibe Coding, OpenAI - io, ChatGPT plus gratuit"
 date: "2025-05-28"
+duration: 25
 description: "Actu IA #3 : \"Gadget\" IA, Claude 4, Vibe Coding, OpenAI - io, ChatGPT plus gratuit"
 ---
 

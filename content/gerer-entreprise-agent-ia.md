@@ -1,6 +1,7 @@
 ---
 title: "Gérer son entreprise avec un agent IA ?"
 date: "2026-04-27"
+duration: 29
 description: "Gérer son entreprise avec un agent IA ?"
 ---
 

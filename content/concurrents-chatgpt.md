@@ -1,6 +1,7 @@
 ---
 title: "Les concurrents de ChatGPT"
 date: "2025-05-02"
+duration: 53
 description: "Les concurrents de ChatGPT"
 ---
 

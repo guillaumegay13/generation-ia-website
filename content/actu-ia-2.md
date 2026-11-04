@@ -1,6 +1,7 @@
 ---
 title: "Actu IA #2 : Google I/O, OpenAI Codex, Devstral & l'avis de Jancovici"
 date: "2025-05-22"
+duration: 35
 description: "Actu IA #2 : Google I/O, OpenAI Codex, Devstral & l'avis de Jancovici"
 ---
 

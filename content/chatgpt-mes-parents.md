@@ -1,6 +1,7 @@
 ---
 title: "J'ai montré ChatGPT à mes parents !"
 date: "2025-04-28"
+duration: 40
 description: "J'ai montré ChatGPT à mes parents !"
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Où en est l'IA en 2026 ? Claude Code, Cowork & Dispatch, OpenClaw,..."
 date: "2026-03-25"
+duration: 40
 description: "Où en est l'IA en 2026 ? Claude Code, Cowork & Dispatch, OpenClaw,..."
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "L'IA au service des entreprises - avec Thibault Fritsch"
 date: "2026-05-05"
+duration: 88
 description: "L'IA au service des entreprises - avec Thibault Fritsch"
 ---
 

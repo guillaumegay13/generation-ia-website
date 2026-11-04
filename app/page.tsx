@@ -1,227 +1,139 @@
 import Image from "next/image";
 import Link from "next/link";
+import Footer from "./components/Footer";
+import Hero from "./components/Hero";
+import { PlayIcon } from "./components/icons";
 import PlatformLinks from "./components/PlatformLinks";
-import { YOUTUBE_LINKS, YouTubeIcon } from "./youtube";
+import TopBar from "./components/TopBar";
+import { pillClass, playButtonClass, wrapClass } from "./components/ui";
+import { formatDate, formatDuration, getAllEpisodes, thumbnailOf, type Episode } from "@/lib/episodes";
 
-const EPISODES = [
-  {
-    title: "2026 : l'année de bascule de l'IA ?",
-    date: "2 novembre 2026",
-    slug: "annee-bascule-ia-2026",
-  },
-  {
-    title: "Ton job remplacé par l'IA ? Comment te protéger - avec Christophe Aulnette",
-    date: "21 octobre 2026",
-    slug: "job-remplace-ia-christophe-aulnette",
-  },
-  {
-    title: "L'IA bouleverse la recherche - avec Laurent Daudet",
-    date: "13 octobre 2026",
-    slug: "ia-bouleverse-recherche-laurent-daudet",
-  },
-  {
-    title: "Entreprendre à l'ère de l'IA - avec Vincent Godbert",
-    date: "6 octobre 2026",
-    slug: "entreprendre-ere-ia-vincent-godbert",
-  },
-  {
-    title: "L'IA va-t-elle anéantir l'humanité ?",
-    date: "22 septembre 2026",
-    slug: "ia-aneantir-humanite",
-  },
-  {
-    title: "Ce que j'ai vu à San Francisco sur le développement de l'IA",
-    date: "2 septembre 2026",
-    slug: "san-francisco-developpement-ia",
-  },
-  {
-    title: "Le comeback des modèles open source américains ? (Meta, Thinking Machines, Grok..)",
-    date: "17 août 2026",
-    slug: "comeback-modeles-open-source-americains",
-  },
-  {
-    title: "Les derniers avancements de l'IA générative 🤯",
-    date: "5 août 2026",
-    slug: "derniers-avancements-ia-generative",
-  },
-  {
-    title: "La guerre de l'intelligence : États-Unis vs Chine",
-    date: "9 juillet 2026",
-    slug: "guerre-intelligence-usa-chine",
-  },
-  {
-    title: "Comment gérer le coût de l'IA pour une entreprise ? Avec Benjamin Drighès",
-    date: "18 juin 2026",
-    slug: "cout-ia-entreprise-benjamin-drighes",
-  },
-  {
-    title: "On fait le point sur l'IA et le podcast ! Claude Fable 5, Génération IA, Modèle Routing",
-    date: "11 juin 2026",
-    slug: "point-ia-podcast-claude-fable-5",
-  },
-  {
-    title: "Comment évaluer une IA ? Avec Stéphane Collot (ex-Meta)",
-    date: "27 mai 2026",
-    slug: "comment-evaluer-ia-stephane-collot",
-  },
-  {
-    title: "L'IA au service des entreprises - avec Thibault Fritsch",
-    date: "5 mai 2026",
-    slug: "ia-service-entreprises-thibault-fritsch",
-  },
-  {
-    title: "Gérer son entreprise avec un agent IA ?",
-    date: "27 avril 2026",
-    slug: "gerer-entreprise-agent-ia",
-  },
-  {
-    title: "L'intelligence artificielle et moi",
-    date: "20 avril 2026",
-    slug: "intelligence-artificielle-et-moi",
-  },
-  {
-    title: "Tout savoir sur Claude Code (skills, Mythos, leak code source, etc)",
-    date: "13 avril 2026",
-    slug: "tout-savoir-sur-claude-code",
-  },
-  {
-    title: "Où en est l'IA en 2026 ? Claude Code, Cowork & Dispatch, OpenClaw,...",
-    date: "25 mars 2026",
-    slug: "ou-en-est-ia-2026",
-  },
-  {
-    title: "Actu IA #6 : Lovable, Meta Superintelligence Lab, Modèles Chinois, gpt-oss, Veo 3",
-    date: "7 août 2025",
-    slug: "actu-ia-6",
-  },
-  {
-    title: "Actu IA #5 : Claude Code et menace, H Company, Base44 solofounder $80M exit",
-    date: "26 juin 2025",
-    slug: "actu-ia-5",
-  },
-  {
-    title: "Actu IA #4 : Mistral Agents, MyTrainer, Veo 3, Coût de l'IA, Évaluation des modèles",
-    date: "12 juin 2025",
-    slug: "actu-ia-4",
-  },
-  {
-    title: "Actu IA #3 : \"Gadget\" IA, Claude 4, Vibe Coding, OpenAI - io, ChatGPT plus gratuit",
-    date: "28 mai 2025",
-    slug: "actu-ia-3",
-  },
-  {
-    title: "Actu IA #2 : Google I/O, OpenAI Codex, Devstral & l'avis de Jancovici",
-    date: "22 mai 2025",
-    slug: "actu-ia-2",
-  },
-  {
-    title: "Actu IA #1 : Manus, statut d'OpenAI, Le Chat Entreprise, Gemini & Super Intelligence",
-    date: "15 mai 2025",
-    slug: "actu-ia-1",
-  },
-  {
-    title: "5 preuves que l'IA générative est créative",
-    date: "12 mai 2025",
-    slug: "5-preuves-ia-generative-creative",
-  },
-  {
-    title: "Coder une application grâce à l'IA en partant de zéro ? Avec Frédéric",
-    date: "10 mai 2025",
-    slug: "coder-application-ia-zero",
-  },
-  {
-    title: "Les intelligences artificielles sont-elles vraiment intelligentes ?",
-    date: "6 mai 2025",
-    slug: "ia-vraiment-intelligentes",
-  },
-  {
-    title: "Comment parler à l'intelligence artificielle ?",
-    date: "5 mai 2025",
-    slug: "comment-parler-ia",
-  },
-  {
-    title: "Les concurrents de ChatGPT",
-    date: "2 mai 2025",
-    slug: "concurrents-chatgpt",
-  },
-  {
-    title: "J'ai montré ChatGPT à mes parents !",
-    date: "28 avril 2025",
-    slug: "chatgpt-mes-parents",
-  },
-];
+const ABOUT =
+  "L'IA générative telle que ChatGPT est une nouvelle révolution telle que l'ont été l'électricité ou internet. Conseils pratiques, outils, actualités et impact sociétal.";
+
+function Badge({ tone, children }: { tone: "new" | "guest"; children: React.ReactNode }) {
+  return (
+    <span
+      className={`mr-1.5 mb-1.5 inline-block rounded-sm px-[7px] py-0.5 text-[11px] font-bold tracking-wider uppercase ${
+        tone === "new" ? "bg-accent/12 text-accent" : "bg-guest/12 text-guest"
+      }`}
+    >
+      {children}
+    </span>
+  );
+}
+
+function EpisodeRow({ ep, isLatest, index }: { ep: Episode; isLatest: boolean; index: number }) {
+  return (
+    <li className="group/row relative -mx-3 border-line [&+&]:border-t">
+      <Link
+        href={`/articles/${ep.slug}`}
+        style={{ animationDelay: `${Math.min(0.12 + index * 0.03, 0.5)}s` }}
+        className="rise grid grid-cols-[96px_minmax(0,1fr)] gap-3.5 rounded-lg px-3 py-4 transition-colors hover:bg-surface-hover sm:grid-cols-[140px_minmax(0,1fr)] sm:gap-[18px]"
+      >
+        <Image
+          src={thumbnailOf(ep)}
+          alt=""
+          width={140}
+          height={79}
+          className="aspect-video w-full rounded-sm bg-surface object-cover"
+        />
+        <div className="min-w-0">
+          {isLatest && <Badge tone="new">Nouveau</Badge>}
+          {ep.guest && <Badge tone="guest">Invité · {ep.guest}</Badge>}
+          <h3 className="mb-1 leading-snug font-bold group-hover/row:underline group-hover/row:underline-offset-2">
+            {ep.title}
+          </h3>
+          <p className="line-clamp-2 text-sm leading-[1.45] text-subdued">{ep.summary}</p>
+          <div className="mt-2.5 flex items-center gap-3.5 text-[13px] text-subdued">
+            <span className="grid size-8 shrink-0 place-items-center rounded-full bg-foreground text-background transition-transform group-hover/row:scale-105">
+              <PlayIcon className="ml-0.5 size-3" />
+            </span>
+            <span>{formatDate(ep.date)}</span>
+            {ep.durationMin > 0 && (
+              <span>
+                <span className="mr-1.5 opacity-70">•</span>
+                {formatDuration(ep.durationMin)}
+              </span>
+            )}
+          </div>
+        </div>
+      </Link>
+    </li>
+  );
+}
 
 export default function Home() {
+  const episodes = getAllEpisodes();
+  const latest = episodes[0];
+  const hours = Math.round(episodes.reduce((sum, e) => sum + e.durationMin, 0) / 60);
+
   return (
-    <div className="flex flex-col min-h-full">
-      {/* Hero */}
-      <section className="flex flex-col items-center px-6 pt-16 pb-12">
-        <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-lg shadow-accent/20 mb-8">
-          <Image
-            src="/cover.jpg"
-            alt="Génération IA - Couverture du podcast"
-            width={192}
-            height={192}
-            priority
-            className="w-full h-full object-cover"
-          />
+    <div className="flex min-h-full flex-col">
+      <TopBar />
+      <Hero
+        cover="/cover.jpg"
+        eyebrow="Podcast"
+        title="Génération IA"
+        meta={["Guillaume Gay", `${episodes.length} épisodes`, `${hours} h d'écoute`]}
+      />
+
+      <div className={wrapClass}>
+        <div className="rise flex flex-wrap items-center gap-3.5 py-6 [animation-delay:.1s] sm:gap-5">
+          <Link href={`/articles/${latest.slug}`} aria-label="Écouter le dernier épisode" className={playButtonClass}>
+            <PlayIcon className="ml-[3px] size-[22px]" />
+          </Link>
+          <a
+            href="https://www.youtube.com/@guillaumegay9547?sub_confirmation=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={pillClass}
+          >
+            S&apos;abonner
+          </a>
+          <div className="w-full sm:ml-auto sm:w-auto">
+            <PlatformLinks variant="icons" />
+          </div>
         </div>
-        <h1 className="text-4xl font-bold tracking-tight text-center sm:text-5xl">
-          Génération{" "}
-          <span className="text-[#a78bfa]">IA</span>
-        </h1>
-        <p className="mt-4 max-w-lg text-center text-lg text-muted leading-relaxed">
-          L&apos;IA générative telle que ChatGPT est une nouvelle révolution telle
-          que l&apos;ont été l&apos;électricité ou internet. Conseils pratiques, outils,
-          actualités et impact sociétal.
-        </p>
-        <p className="mt-2 text-sm text-muted">
-          Par <span className="text-foreground">Guillaume Gay</span>
-        </p>
 
-        {/* Platform links */}
-        <div className="mt-8">
-          <PlatformLinks />
+        <div className="grid gap-6 pb-20 md:grid-cols-[minmax(0,1fr)_300px] md:gap-12">
+          <section>
+            <h2 className="mt-2 mb-3 text-2xl font-bold tracking-tight">Tous les épisodes</h2>
+            <ol>
+              {episodes.map((ep, i) => (
+                <EpisodeRow key={ep.slug} ep={ep} isLatest={i === 0} index={i} />
+              ))}
+            </ol>
+          </section>
+
+          <aside className="rise self-start rounded-xl bg-surface p-5 [animation-delay:.15s] md:sticky md:top-21">
+            <h2 className="mb-2.5 font-bold">À propos</h2>
+            <p className="text-sm leading-relaxed text-subdued">{ABOUT}</p>
+            <div className="mt-4 flex flex-wrap gap-2">
+              {["Tech", "Société", "Français"].map((tag) => (
+                <span key={tag} className="rounded-full bg-surface-hover px-2.5 py-1.5 text-xs font-semibold text-subdued">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <div className="mt-[18px] flex items-center gap-3 border-t border-line pt-4">
+              <Image
+                src="/cover.jpg"
+                alt=""
+                width={44}
+                height={44}
+                className="size-11 rounded-full object-cover object-[70%_20%]"
+              />
+              <div>
+                <p className="text-sm font-bold">Guillaume Gay</p>
+                <p className="text-[13px] text-subdued">Hôte du podcast</p>
+              </div>
+            </div>
+          </aside>
         </div>
-      </section>
+      </div>
 
-      {/* Épisodes */}
-      <section className="mx-auto w-full max-w-2xl px-6 pb-20">
-        <h2 className="text-2xl font-semibold mb-6">Épisodes</h2>
-        <ol className="flex flex-col divide-y divide-card-border">
-          {EPISODES.map((ep) => {
-            const youtube = YOUTUBE_LINKS[ep.slug];
-            return (
-              <li key={ep.slug} className="flex items-center gap-3">
-                <Link
-                  href={`/articles/${ep.slug}`}
-                  className="flex flex-1 flex-col gap-1 py-4 transition-colors hover:text-accent-light"
-                >
-                  <span className="font-medium leading-snug">{ep.title}</span>
-                  <span className="text-sm text-muted">{ep.date}</span>
-                </Link>
-                {youtube && (
-                  <a
-                    href={youtube}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Regarder « ${ep.title} » sur YouTube`}
-                    title="Regarder sur YouTube"
-                    className="shrink-0 text-muted transition-colors hover:text-[#ff0000]"
-                  >
-                    <YouTubeIcon className="size-6 fill-current" />
-                  </a>
-                )}
-              </li>
-            );
-          })}
-        </ol>
-      </section>
-
-      {/* Footer */}
-      <footer className="mt-auto border-t border-card-border py-8 text-center text-sm text-muted">
-        &copy; {new Date().getFullYear()} Génération IA &mdash; Guillaume Gay
-      </footer>
+      <Footer />
     </div>
   );
 }

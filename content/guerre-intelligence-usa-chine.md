@@ -1,6 +1,7 @@
 ---
 title: "La guerre de l'intelligence : États-Unis vs Chine"
 date: "2026-07-09"
+duration: 19
 description: "La guerre de l'intelligence : États-Unis vs Chine"
 ---
 

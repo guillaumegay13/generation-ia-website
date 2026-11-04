@@ -1,223 +1,94 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import fs from "fs";
-import path from "path";
-import PlatformLinks from "../../components/PlatformLinks";
-import { YOUTUBE_LINKS, YouTubeIcon } from "../../youtube";
+import Footer from "../../components/Footer";
+import Hero from "../../components/Hero";
+import { ChevronIcon, PlayIcon } from "../../components/icons";
+import Markdown from "../../components/Markdown";
+import PlatformLinks, { PLATFORMS } from "../../components/PlatformLinks";
+import ShareButton from "../../components/ShareButton";
+import TopBar from "../../components/TopBar";
+import { playButtonClass, wrapClass } from "../../components/ui";
+import YouTubePlayer, { PlayEpisodeButton } from "../../components/YouTubePlayer";
+import { formatDate, formatDuration, getAllEpisodes, getEpisode } from "@/lib/episodes";
 
-type Article = {
-  title: string;
-  date: string;
-  description: string;
-  content: string;
-};
-
-const CONTENT_DIR = path.join(process.cwd(), "content");
-
-function parseMarkdown(slug: string): Article | null {
-  const filePath = path.join(CONTENT_DIR, `${slug}.md`);
-  if (!fs.existsSync(filePath)) return null;
-
-  const raw = fs.readFileSync(filePath, "utf-8");
-  const match = raw.match(/^---\n([\s\S]*?)\n---\n([\s\S]*)$/);
-  if (!match) return null;
-
-  const frontmatter = match[1];
-  const content = match[2].trim();
-
-  const title =
-    frontmatter.match(/title:\s*"(.*)"/)?.[1] ?? slug;
-  const date =
-    frontmatter.match(/date:\s*"(.*)"/)?.[1] ?? "";
-  const description =
-    frontmatter.match(/description:\s*"(.*)"/)?.[1] ?? "";
-
-  return { title, date, description, content };
-}
-
-function getAllSlugs(): string[] {
-  if (!fs.existsSync(CONTENT_DIR)) return [];
-  return fs
-    .readdirSync(CONTENT_DIR)
-    .filter((f) => f.endsWith(".md"))
-    .map((f) => f.replace(/\.md$/, ""));
-}
+type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  return getAllEpisodes().map((e) => ({ slug: e.slug }));
 }
-
-type Props = {
-  params: Promise<{ slug: string }>;
-};
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const article = parseMarkdown(slug);
-  if (!article) return {};
+  const ep = getEpisode(slug);
+  if (!ep) return {};
   return {
-    title: article.title,
-    description: `Transcription de l'épisode "${article.title}" du podcast Génération IA.`,
+    title: ep.title,
+    description: ep.summary || `Transcription de l'épisode "${ep.title}" du podcast Génération IA.`,
   };
-}
-
-function formatDate(dateStr: string): string {
-  const d = new Date(dateStr + "T00:00:00");
-  return d.toLocaleDateString("fr-FR", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-  });
-}
-
-function renderContent(content: string) {
-  // Split into sections by ## headings and paragraphs
-  const lines = content.split("\n");
-  const elements: React.ReactNode[] = [];
-  let key = 0;
-
-  for (const line of lines) {
-    if (line.startsWith("## ")) {
-      elements.push(
-        <h2
-          key={key++}
-          className="text-2xl font-semibold mt-10 mb-4"
-        >
-          {line.replace("## ", "")}
-        </h2>
-      );
-    } else if (line === "---") {
-      elements.push(
-        <hr key={key++} className="my-8 border-card-border" />
-      );
-    } else if (line.trim() === "") {
-      // skip empty lines (spacing handled by margins)
-    } else {
-      // Render paragraph with markdown links converted to <a> tags
-      const parts: React.ReactNode[] = [];
-      const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-      let lastIndex = 0;
-      let match;
-      let partKey = 0;
-
-      const text = line;
-      while ((match = linkRegex.exec(text)) !== null) {
-        if (match.index > lastIndex) {
-          parts.push(text.slice(lastIndex, match.index));
-        }
-        parts.push(
-          <a
-            key={partKey++}
-            href={match[2]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-accent underline underline-offset-2 hover:text-accent-light"
-          >
-            {match[1]}
-          </a>
-        );
-        lastIndex = match.index + match[0].length;
-      }
-      if (lastIndex < text.length) {
-        parts.push(text.slice(lastIndex));
-      }
-
-      // Handle *italic* text
-      const processItalics = (nodes: React.ReactNode[]): React.ReactNode[] => {
-        return nodes.map((node, i) => {
-          if (typeof node !== "string") return node;
-          const italicParts = node.split(/\*([^*]+)\*/g);
-          if (italicParts.length === 1) return node;
-          return italicParts.map((part, j) =>
-            j % 2 === 1 ? <em key={`${i}-${j}`}>{part}</em> : part
-          );
-        });
-      };
-
-      elements.push(
-        <p key={key++} className="mb-4 leading-relaxed text-foreground/90">
-          {processItalics(parts)}
-        </p>
-      );
-    }
-  }
-
-  return elements;
 }
 
 const TRANSCRIPT_NOTE =
   "Transcription brute générée automatiquement par Whisper — peut contenir des imprécisions.";
 
-// The transcript stays in the server-rendered HTML (indexed by search
-// engines) but is collapsed by default so it doesn't swamp the page.
-function splitTranscript(content: string) {
-  const [intro, transcript] = content.split(/\n---\s*\n+## Transcription\s*\n/);
-  return {
-    intro: intro
-      .split("\n")
-      .filter((line) => !line.startsWith("*Transcription brute"))
-      .join("\n")
-      .trim(),
-    transcript: transcript?.trim() ?? "",
-  };
-}
-
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
-  const article = parseMarkdown(slug);
+  const ep = getEpisode(slug);
+  if (!ep) notFound();
 
-  if (!article) {
-    notFound();
-  }
-
-  const { intro, transcript } = splitTranscript(article.content);
+  const spotify = PLATFORMS.find((p) => p.name === "Spotify")!.url;
 
   return (
-    <article className="mx-auto w-full max-w-2xl px-6 py-16">
-      <Link
-        href="/"
-        className="text-sm text-muted hover:text-accent-light transition-colors"
-      >
-        &larr; Retour aux épisodes
-      </Link>
-      <h1 className="mt-6 text-3xl font-bold tracking-tight sm:text-4xl">
-        {article.title}
-      </h1>
-      <p className="mt-2 text-sm text-muted">{formatDate(article.date)}</p>
-      <div className="mt-8">
-        <p className="mb-4 text-sm text-muted">Écouter sur :</p>
-        <PlatformLinks layout="stack" />
-        {YOUTUBE_LINKS[slug] && (
-          <a
-            href={YOUTUBE_LINKS[slug]}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-4 flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-[#ff0000] px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-          >
-            <YouTubeIcon className="size-5 fill-current" />
-            Regarder l&apos;épisode sur YouTube
-          </a>
-        )}
+    <div className="flex min-h-full flex-col">
+      <TopBar title={ep.title} />
+      <Hero
+        cover={ep.youtubeId ? undefined : "/cover.jpg"}
+        eyebrow={ep.guest ? `Épisode · avec ${ep.guest}` : "Épisode"}
+        title={ep.title}
+        size="episode"
+        meta={["Génération IA", formatDate(ep.date), formatDuration(ep.durationMin)].filter(Boolean)}
+      />
+
+      <div className={wrapClass}>
+        <div className="rise flex items-center gap-5 py-6 [animation-delay:.1s]">
+          {ep.youtubeId ? (
+            <PlayEpisodeButton />
+          ) : (
+            <a href={spotify} target="_blank" rel="noopener noreferrer" aria-label="Écouter sur Spotify" className={playButtonClass}>
+              <PlayIcon className="ml-[3px] size-[22px]" />
+            </a>
+          )}
+          <ShareButton title={ep.title} />
+        </div>
+
+        <div className="grid gap-8 pb-20 md:grid-cols-[minmax(0,1fr)_300px] md:gap-12">
+          <article className="rise min-w-0 [animation-delay:.15s]">
+            {ep.youtubeId && <YouTubePlayer id={ep.youtubeId} title={ep.title} />}
+            <div className="max-w-[65ch]">
+              <Markdown source={ep.intro} className="mb-4 text-[17px] leading-[1.65] text-[#d9d9d9]" />
+            </div>
+
+            {ep.transcript && (
+              <details className="group mt-8 border-t border-line">
+                <summary className="flex cursor-pointer list-none items-center justify-between py-[18px] text-lg font-bold [&::-webkit-details-marker]:hidden">
+                  Transcription complète
+                  <ChevronIcon className="size-5 text-subdued transition-transform group-open:rotate-180" />
+                </summary>
+                <div className="max-w-[65ch]">
+                  <p className="mb-4 text-[13px] text-faint italic">{TRANSCRIPT_NOTE}</p>
+                  <Markdown source={ep.transcript} className="mb-3.5 text-[15px] leading-[1.7] text-subdued" />
+                </div>
+              </details>
+            )}
+          </article>
+
+          <aside className="self-start rounded-xl bg-surface p-5 md:sticky md:top-21">
+            <h2 className="mb-2.5 font-bold">Écouter sur</h2>
+            <PlatformLinks variant="list" />
+          </aside>
+        </div>
       </div>
-      <div className="mt-10">{renderContent(intro)}</div>
-      {transcript && (
-        <details className="group mt-10 rounded-2xl border border-card-border bg-card">
-          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium transition-colors hover:text-accent-light [&::-webkit-details-marker]:hidden">
-            Lire la transcription complète
-            <span
-              aria-hidden
-              className="text-muted transition-transform group-open:rotate-180"
-            >
-              ▾
-            </span>
-          </summary>
-          <div className="border-t border-card-border px-5 pt-5 pb-1 text-sm">
-            <p className="mb-4 text-xs italic text-muted">{TRANSCRIPT_NOTE}</p>
-            {renderContent(transcript)}
-          </div>
-        </details>
-      )}
-    </article>
+
+      <Footer />
+    </div>
   );
 }

@@ -1,6 +1,7 @@
 ---
 title: "Les intelligences artificielles sont-elles vraiment intelligentes ?"
 date: "2025-05-06"
+duration: 28
 description: "Les intelligences artificielles sont-elles vraiment intelligentes ?"
 ---
 

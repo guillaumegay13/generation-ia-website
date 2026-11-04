@@ -1,6 +1,7 @@
 ---
 title: "L'IA bouleverse la recherche - avec Laurent Daudet"
 date: "2026-10-13"
+duration: 55
 description: "L'IA bouleverse la recherche - avec Laurent Daudet"
 ---
 

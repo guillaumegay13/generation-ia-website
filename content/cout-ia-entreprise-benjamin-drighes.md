@@ -1,6 +1,7 @@
 ---
 title: "Comment gérer le coût de l'IA pour une entreprise ? Avec Benjamin Drighès"
 date: "2026-06-18"
+duration: 64
 description: "Comment gérer le coût de l'IA pour une entreprise ? Avec Benjamin Drighès"
 ---
 

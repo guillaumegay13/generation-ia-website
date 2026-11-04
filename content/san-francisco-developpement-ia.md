@@ -1,6 +1,7 @@
 ---
 title: "Ce que j'ai vu à San Francisco sur le développement de l'IA"
 date: "2026-09-02"
+duration: 26
 description: "Ce que j'ai vu à San Francisco sur le développement de l'IA"
 ---
 

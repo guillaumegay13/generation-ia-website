@@ -1,6 +1,7 @@
 ---
 title: "Actu IA #1 : Manus, statut d'OpenAI, Le Chat Entreprise, Gemini & Super Intelligence"
 date: "2025-05-15"
+duration: 30
 description: "Actu IA #1 : Manus, statut d'OpenAI, Le Chat Entreprise, Gemini & Super Intelligence"
 ---
 

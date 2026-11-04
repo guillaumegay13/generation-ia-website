@@ -1,6 +1,7 @@
 ---
 title: "Tout savoir sur Claude Code (skills, Mythos, leak code source, etc)"
 date: "2026-04-13"
+duration: 50
 description: "Tout savoir sur Claude Code (skills, Mythos, leak code source, etc)"
 ---
 

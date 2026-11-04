@@ -1,6 +1,7 @@
 ---
 title: "Actu IA #5 : Claude Code et menace, H Company, Base44 solofounder $80M exit"
 date: "2025-06-26"
+duration: 19
 description: "Actu IA #5 : Claude Code et menace, H Company, Base44 solofounder $80M exit"
 ---
 

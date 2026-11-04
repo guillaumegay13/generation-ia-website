@@ -1,6 +1,7 @@
 ---
 title: "Les derniers avancements de l'IA générative 🤯"
 date: "2026-08-05"
+duration: 34
 description: "Les derniers avancements de l'IA générative 🤯"
 ---
 
