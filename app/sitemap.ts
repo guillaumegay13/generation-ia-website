@@ -11,6 +11,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 1,
     },
+    ...["/mentions-legales", "/confidentialite"].map((path) => ({
+      url: `${SITE_URL}${path}`,
+      changeFrequency: "yearly" as const,
+      priority: 0.2,
+    })),
     ...episodes.map((e) => ({
       url: `${SITE_URL}/articles/${e.slug}`,
       lastModified: new Date(e.date),

@@ -4,6 +4,8 @@ export const SITE_URL = "https://generationia.xyz";
 export const RSS_URL = "https://media.rss.com/generation-ia/feed.xml";
 export const SITE_NAME = "Génération IA";
 export const HOST_NAME = "Guillaume Gay";
+// Already public in the RSS.com episode descriptions.
+export const CONTACT_EMAIL = "guillaume.gay@protonmail.com";
 export const HOST_LINKEDIN = "https://www.linkedin.com/in/guillaume-gay-aa0ba6133/";
 export const SITE_DESCRIPTION =
   "L'IA générative telle que ChatGPT est une nouvelle révolution telle que l'ont été l'électricité ou internet. Conseils pratiques, outils, actualités et impact sociétal.";
