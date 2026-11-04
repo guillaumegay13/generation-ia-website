@@ -9,7 +9,8 @@ import ShareButton from "../../components/ShareButton";
 import TopBar from "../../components/TopBar";
 import { playButtonClass, wrapClass } from "../../components/ui";
 import YouTubePlayer, { PlayEpisodeButton } from "../../components/YouTubePlayer";
-import { formatDate, formatDuration, getAllEpisodes, getEpisode } from "@/lib/episodes";
+import { formatDate, formatDuration, getAllEpisodes, getEpisode, thumbnailOf } from "@/lib/episodes";
+import { HOST_NAME, RSS_URL, SITE_NAME, SITE_URL, alternatesFor, jsonLd } from "@/lib/site";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,9 +22,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const ep = getEpisode(slug);
   if (!ep) return {};
+  const description = ep.summary || `Transcription de l'épisode "${ep.title}" du podcast ${SITE_NAME}.`;
+  const image = ep.youtubeId ? thumbnailOf(ep, "maxres") : "/cover.jpg";
   return {
     title: ep.title,
-    description: ep.summary || `Transcription de l'épisode "${ep.title}" du podcast Génération IA.`,
+    description,
+    alternates: alternatesFor(`/articles/${ep.slug}`),
+    openGraph: {
+      type: "article",
+      title: ep.title,
+      description,
+      url: `/articles/${ep.slug}`,
+      siteName: SITE_NAME,
+      locale: "fr_FR",
+      publishedTime: ep.date,
+      images: [ep.youtubeId ? { url: image, width: 1280, height: 720 } : { url: image, width: 600, height: 600 }],
+    },
+    twitter: {
+      card: ep.youtubeId ? "summary_large_image" : "summary",
+      title: ep.title,
+      description,
+      images: [image],
+    },
   };
 }
 
@@ -36,9 +56,37 @@ export default async function ArticlePage({ params }: Props) {
   if (!ep) notFound();
 
   const spotify = PLATFORMS.find((p) => p.name === "Spotify")!.url;
+  const url = `${SITE_URL}/articles/${ep.slug}`;
+  const structured = {
+    "@context": "https://schema.org",
+    "@type": "PodcastEpisode",
+    name: ep.title,
+    url,
+    description: ep.summary,
+    datePublished: ep.date,
+    inLanguage: "fr-FR",
+    ...(ep.durationMin ? { timeRequired: `PT${ep.durationMin}M` } : {}),
+    author: { "@type": "Person", name: HOST_NAME },
+    partOfSeries: { "@type": "PodcastSeries", name: SITE_NAME, url: SITE_URL, webFeed: RSS_URL },
+    ...(ep.youtubeId
+      ? {
+          video: {
+            "@type": "VideoObject",
+            name: ep.title,
+            description: ep.summary || ep.title,
+            thumbnailUrl: thumbnailOf(ep, "maxres"),
+            uploadDate: ep.date,
+            ...(ep.durationMin ? { duration: `PT${ep.durationMin}M` } : {}),
+            embedUrl: `https://www.youtube.com/embed/${ep.youtubeId}`,
+            contentUrl: `https://www.youtube.com/watch?v=${ep.youtubeId}`,
+          },
+        }
+      : {}),
+  };
 
   return (
     <div className="flex min-h-full flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(structured)} />
       <TopBar title={ep.title} />
       <Hero
         cover={ep.youtubeId ? undefined : "/cover.jpg"}

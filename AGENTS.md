@@ -13,6 +13,13 @@ Each episode is one file in `content/<slug>.md`. The homepage list and the artic
 - YouTube link: add the slug to `app/youtube.tsx`. Without one, the page shows the cover and no player.
 - A guest is detected from a title ending in `avec <Nom>` or `(<Nom>)`.
 
+## SEO
+
+- Site constants (URL, RSS feed, host, description) live in `lib/site.ts`; don't hardcode them in pages.
+- `app/robots.ts` and `app/sitemap.ts` are generated from the episodes; nothing to update by hand.
+- Every page sets `alternates: alternatesFor(path)` (canonical URL + RSS feed link). A page's `alternates` replaces the layout's, so always go through this helper.
+- JSON-LD: `PodcastSeries` on the homepage, `PodcastEpisode` (+ `VideoObject` when there is a YouTube video) on episode pages. Serialize with `jsonLd()`.
+
 ## Short links
 
 `/discord` redirects to the current Discord invite (see `redirects()` in `next.config.ts`). Discord invites expire: when the invite changes, update only that destination. Link to `https://generationia.xyz/discord` everywhere (site, YouTube, RSS), never to a raw invite.

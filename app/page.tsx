@@ -7,9 +7,10 @@ import PlatformLinks, { BrandMark, COMMUNITY } from "./components/PlatformLinks"
 import TopBar from "./components/TopBar";
 import { pillClass, playButtonClass, wrapClass } from "./components/ui";
 import { formatDate, formatDuration, getAllEpisodes, thumbnailOf, type Episode } from "@/lib/episodes";
+import { HOST_LINKEDIN, HOST_NAME, RSS_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, jsonLd } from "@/lib/site";
+import { PLATFORMS } from "./components/PlatformLinks";
 
-const ABOUT =
-  "L'IA générative telle que ChatGPT est une nouvelle révolution telle que l'ont été l'électricité ou internet. Conseils pratiques, outils, actualités et impact sociétal.";
+const ABOUT = SITE_DESCRIPTION;
 
 function Badge({ tone, children }: { tone: "new" | "guest"; children: React.ReactNode }) {
   return (
@@ -69,8 +70,28 @@ export default function Home() {
   const [discord, linkedin] = COMMUNITY;
   const hours = Math.round(episodes.reduce((sum, e) => sum + e.durationMin, 0) / 60);
 
+  const series = {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    name: SITE_NAME,
+    description: SITE_DESCRIPTION,
+    url: SITE_URL,
+    image: `${SITE_URL}/cover.jpg`,
+    inLanguage: "fr-FR",
+    webFeed: RSS_URL,
+    author: { "@type": "Person", name: HOST_NAME, sameAs: [HOST_LINKEDIN] },
+    sameAs: PLATFORMS.map((p) => p.url),
+    episode: episodes.slice(0, 10).map((e) => ({
+      "@type": "PodcastEpisode",
+      name: e.title,
+      url: `${SITE_URL}/articles/${e.slug}`,
+      datePublished: e.date,
+    })),
+  };
+
   return (
     <div className="flex min-h-full flex-col">
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLd(series)} />
       <TopBar />
       <Hero
         cover="/cover.jpg"

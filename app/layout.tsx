@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import { Anton, Figtree } from "next/font/google";
 import "./globals.css";
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, alternatesFor } from "@/lib/site";
 
 const figtree = Figtree({
   variable: "--font-figtree",
@@ -15,14 +16,17 @@ const anton = Anton({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
+  alternates: alternatesFor("/"),
   title: {
     default: "Génération IA - Le podcast sur l'intelligence artificielle",
     template: "%s | Génération IA",
   },
-  description:
-    "L'IA générative telle que ChatGPT est une nouvelle révolution telle que l'ont été l'électricité ou internet. Conseils pratiques, outils, actualités et impact sociétal.",
+  description: SITE_DESCRIPTION,
   openGraph: {
-    title: "Génération IA",
+    title: SITE_NAME,
+    siteName: SITE_NAME,
+    url: "/",
     description:
       "Le podcast francophone sur l'intelligence artificielle générative",
     type: "website",
