@@ -1,0 +1,37 @@
+AGENTS.md
+  s_dafd9aef4e15db::t_8683c9af957b9a 16-19
+app/articles/[slug]/page.tsx
+  s_dafd9aef4e15db::t_5708434fe31435 7,87-88
+app/components/PlatformLinks.tsx
+  s_dafd9aef4e15db::t_1ef213a481da48 36-54,56,59,73-79,83,92,101
+app/page.tsx
+  s_dafd9aef4e15db::t_4c6e15630d18c0 6,69,120-129,141-150
+content/comeback-modeles-open-source-americains.md
+  s_dafd9aef4e15db::t_2bc9d086ef301a 10
+content/derniers-avancements-ia-generative.md
+  s_dafd9aef4e15db::t_a0b5987b060f78 10
+content/entreprendre-ere-ia-vincent-godbert.md
+  s_dafd9aef4e15db::t_458d1ec6a3c3a3 10
+content/ia-aneantir-humanite.md
+  s_dafd9aef4e15db::t_9352001d44c481 10
+content/san-francisco-developpement-ia.md
+  s_dafd9aef4e15db::t_5abdf4f0053117 10
+next.config.ts
+  s_dafd9aef4e15db::t_2569f7f5b600b2 4-14
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "0e8ede6d3bc61b27d069053452d2b9e148c9948a",
+  "prompts": {},
+  "sessions": {
+    "s_dafd9aef4e15db": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2e6f1e6a-3b67-4980-ac02-3abaacc899b5",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
