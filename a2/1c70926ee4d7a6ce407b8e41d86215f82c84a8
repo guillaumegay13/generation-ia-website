@@ -1,0 +1,19 @@
+app/icon.svg
+  s_dafd9aef4e15db::t_b2787592154de3 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "a21c70926ee4d7a6ce407b8e41d86215f82c84a8",
+  "prompts": {},
+  "sessions": {
+    "s_dafd9aef4e15db": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2e6f1e6a-3b67-4980-ac02-3abaacc899b5",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
