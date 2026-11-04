@@ -187,13 +187,13 @@ export default async function ArticlePage({ params }: Props) {
       <p className="mt-2 text-sm text-muted">{formatDate(article.date)}</p>
       <div className="mt-8">
         <p className="mb-4 text-sm text-muted">Écouter sur :</p>
-        <PlatformLinks align="start" />
+        <PlatformLinks layout="stack" />
         {YOUTUBE_LINKS[slug] && (
           <a
             href={YOUTUBE_LINKS[slug]}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-[#ff0000] px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
+            className="mt-4 flex w-full max-w-xs items-center justify-center gap-2 rounded-full bg-[#ff0000] px-4 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           >
             <YouTubeIcon className="size-5 fill-current" />
             Regarder l&apos;épisode sur YouTube
