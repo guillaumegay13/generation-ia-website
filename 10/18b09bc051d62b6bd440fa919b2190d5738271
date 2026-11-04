@@ -1,0 +1,21 @@
+app/articles/[slug]/page.tsx
+  s_dafd9aef4e15db::t_e9c8ce7fcf2c19 190,196
+app/components/PlatformLinks.tsx
+  s_dafd9aef4e15db::t_ed813abfb3e794 1-2,7-10,15-16,21-23,28-29,34,36,38,41-45,53,55-63
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "1018b09bc051d62b6bd440fa919b2190d5738271",
+  "prompts": {},
+  "sessions": {
+    "s_dafd9aef4e15db": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2e6f1e6a-3b67-4980-ac02-3abaacc899b5",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
