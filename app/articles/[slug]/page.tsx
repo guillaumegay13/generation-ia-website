@@ -146,6 +146,23 @@ function renderContent(content: string) {
   return elements;
 }
 
+const TRANSCRIPT_NOTE =
+  "Transcription brute générée automatiquement par Whisper — peut contenir des imprécisions.";
+
+// The transcript stays in the server-rendered HTML (indexed by search
+// engines) but is collapsed by default so it doesn't swamp the page.
+function splitTranscript(content: string) {
+  const [intro, transcript] = content.split(/\n---\s*\n+## Transcription\s*\n/);
+  return {
+    intro: intro
+      .split("\n")
+      .filter((line) => !line.startsWith("*Transcription brute"))
+      .join("\n")
+      .trim(),
+    transcript: transcript?.trim() ?? "",
+  };
+}
+
 export default async function ArticlePage({ params }: Props) {
   const { slug } = await params;
   const article = parseMarkdown(slug);
@@ -153,6 +170,8 @@ export default async function ArticlePage({ params }: Props) {
   if (!article) {
     notFound();
   }
+
+  const { intro, transcript } = splitTranscript(article.content);
 
   return (
     <article className="mx-auto w-full max-w-2xl px-6 py-16">
@@ -181,7 +200,24 @@ export default async function ArticlePage({ params }: Props) {
           </a>
         )}
       </div>
-      <div className="mt-10">{renderContent(article.content)}</div>
+      <div className="mt-10">{renderContent(intro)}</div>
+      {transcript && (
+        <details className="group mt-10 rounded-2xl border border-card-border bg-card">
+          <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium transition-colors hover:text-accent-light [&::-webkit-details-marker]:hidden">
+            Lire la transcription complète
+            <span
+              aria-hidden
+              className="text-muted transition-transform group-open:rotate-180"
+            >
+              ▾
+            </span>
+          </summary>
+          <div className="border-t border-card-border px-5 pt-5 pb-1 text-sm">
+            <p className="mb-4 text-xs italic text-muted">{TRANSCRIPT_NOTE}</p>
+            {renderContent(transcript)}
+          </div>
+        </details>
+      )}
     </article>
   );
 }
