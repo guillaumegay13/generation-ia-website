@@ -1,6 +1,9 @@
 // YouTube video link per episode (slug -> watch URL).
 // Single source of truth shared by the homepage list and article pages.
 export const YOUTUBE_LINKS: Record<string, string> = {
+  "annee-bascule-ia-2026": "https://youtu.be/nLQk8D2PzNI",
+  "job-remplace-ia-christophe-aulnette": "https://youtu.be/VAGwFipj-o4",
+  "ia-bouleverse-recherche-laurent-daudet": "https://youtu.be/8hwsQsmQ_1o",
   "entreprendre-ere-ia-vincent-godbert": "https://youtu.be/z7_DYqZ4lRc",
   "cout-ia-entreprise-benjamin-drighes": "https://youtu.be/DiRC-7vmL0M",
   "comment-evaluer-ia-stephane-collot": "https://youtu.be/M58gvU2xlhY",

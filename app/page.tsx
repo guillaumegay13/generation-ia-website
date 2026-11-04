@@ -5,6 +5,21 @@ import { YOUTUBE_LINKS, YouTubeIcon } from "./youtube";
 
 const EPISODES = [
   {
+    title: "2026 : l'année de bascule de l'IA ?",
+    date: "2 novembre 2026",
+    slug: "annee-bascule-ia-2026",
+  },
+  {
+    title: "Ton job remplacé par l'IA ? Comment te protéger - avec Christophe Aulnette",
+    date: "21 octobre 2026",
+    slug: "job-remplace-ia-christophe-aulnette",
+  },
+  {
+    title: "L'IA bouleverse la recherche - avec Laurent Daudet",
+    date: "13 octobre 2026",
+    slug: "ia-bouleverse-recherche-laurent-daudet",
+  },
+  {
     title: "Entreprendre à l'ère de l'IA - avec Vincent Godbert",
     date: "6 octobre 2026",
     slug: "entreprendre-ere-ia-vincent-godbert",
