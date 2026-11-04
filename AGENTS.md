@@ -13,6 +13,10 @@ Each episode is one file in `content/<slug>.md`. The homepage list and the artic
 - YouTube link: add the slug to `app/youtube.tsx`. Without one, the page shows the cover and no player.
 - A guest is detected from a title ending in `avec <Nom>` or `(<Nom>)`.
 
+## Short links
+
+`/discord` redirects to the current Discord invite (see `redirects()` in `next.config.ts`). Discord invites expire: when the invite changes, update only that destination. Link to `https://generationia.xyz/discord` everywhere (site, YouTube, RSS), never to a raw invite.
+
 ## Design system
 
 Dark, Spotify-like. Tokens live in `app/globals.css` (`@theme`): use them, never raw hex values in pages.

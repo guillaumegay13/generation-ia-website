@@ -4,7 +4,7 @@ import Footer from "../../components/Footer";
 import Hero from "../../components/Hero";
 import { ChevronIcon, PlayIcon } from "../../components/icons";
 import Markdown from "../../components/Markdown";
-import PlatformLinks, { PLATFORMS } from "../../components/PlatformLinks";
+import PlatformLinks, { COMMUNITY, PLATFORMS } from "../../components/PlatformLinks";
 import ShareButton from "../../components/ShareButton";
 import TopBar from "../../components/TopBar";
 import { playButtonClass, wrapClass } from "../../components/ui";
@@ -84,6 +84,8 @@ export default async function ArticlePage({ params }: Props) {
           <aside className="self-start rounded-xl bg-surface p-5 md:sticky md:top-21">
             <h2 className="mb-2.5 font-bold">Écouter sur</h2>
             <PlatformLinks variant="list" />
+            <h2 className="mt-5 mb-2.5 border-t border-line pt-5 font-bold">Communauté</h2>
+            <PlatformLinks variant="list" items={COMMUNITY} />
           </aside>
         </div>
       </div>

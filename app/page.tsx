@@ -3,7 +3,7 @@ import Link from "next/link";
 import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import { PlayIcon } from "./components/icons";
-import PlatformLinks from "./components/PlatformLinks";
+import PlatformLinks, { BrandMark, COMMUNITY } from "./components/PlatformLinks";
 import TopBar from "./components/TopBar";
 import { pillClass, playButtonClass, wrapClass } from "./components/ui";
 import { formatDate, formatDuration, getAllEpisodes, thumbnailOf, type Episode } from "@/lib/episodes";
@@ -66,6 +66,7 @@ function EpisodeRow({ ep, isLatest, index }: { ep: Episode; isLatest: boolean; i
 export default function Home() {
   const episodes = getAllEpisodes();
   const latest = episodes[0];
+  const [discord, linkedin] = COMMUNITY;
   const hours = Math.round(episodes.reduce((sum, e) => sum + e.durationMin, 0) / 60);
 
   return (
@@ -116,7 +117,16 @@ export default function Home() {
                 </span>
               ))}
             </div>
-            <div className="mt-[18px] flex items-center gap-3 border-t border-line pt-4">
+            <a
+              href={discord.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 flex items-center justify-center gap-2.5 rounded-full bg-surface-hover px-4 py-2.5 text-sm font-bold transition-colors hover:bg-line"
+            >
+              <BrandMark p={discord} colored />
+              {discord.label}
+            </a>
+            <div className="mt-5 flex items-center gap-3 border-t border-line pt-4">
               <Image
                 src="/cover.jpg"
                 alt=""
@@ -128,6 +138,16 @@ export default function Home() {
                 <p className="text-sm font-bold">Guillaume Gay</p>
                 <p className="text-[13px] text-subdued">Hôte du podcast</p>
               </div>
+              <a
+                href={linkedin.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={linkedin.label}
+                title={linkedin.label}
+                className="ml-auto grid size-10 place-items-center rounded-full transition-colors hover:bg-surface-hover"
+              >
+                <BrandMark p={linkedin} colored />
+              </a>
             </div>
           </aside>
         </div>

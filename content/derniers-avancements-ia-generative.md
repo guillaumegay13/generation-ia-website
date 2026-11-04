@@ -7,7 +7,7 @@ description: "Les derniers avancements de l'IA générative 🤯"
 
 Aujourd'hui, on analyse les derniers avancements de l'IA générative : un modèle d'OpenAI vient de résoudre 10 problèmes de mathématiques, un autre a hacké Hugging Face durant une évaluation. De l'autre côté, les modèles open source chinois continuent de challenger les modèles « frontier ».
 
-Rejoignez le serveur Discord pour discuter du podcast et de son évolution : [https://discord.gg/UvhcUyvbn](https://discord.gg/UvhcUyvbn)
+Rejoignez le serveur Discord pour discuter du podcast et de son évolution : [https://generationia.xyz/discord](https://generationia.xyz/discord)
 
 À bientôt,
 Guillaume

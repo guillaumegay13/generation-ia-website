@@ -7,7 +7,7 @@ description: "L'IA va-t-elle anéantir l'humanité ?"
 
 Dario Amodei, le CEO d'Anthropic, a récemment lancé un appel pour ralentir le développement de l'IA suite à la démission du lanceur d'alerte Jacob Coxon. Cet appel a été soutenu notamment par Sam Altman et Elon Musk, mais pas par Donald Trump, qui refuse de freiner face à la Chine. Reprenons les faits : l'IA pose-t-elle réellement un risque existentiel pour l'humanité ? Ou est-ce une énième manipulation des grands laboratoires d'IA ?
 
-Rejoins le Discord : [https://discord.gg/UvhcUyvbn](https://discord.gg/UvhcUyvbn)
+Rejoins le Discord : [https://generationia.xyz/discord](https://generationia.xyz/discord)
 
 N'hésitez pas à mettre 5 étoiles au podcast si vous voulez le soutenir !
 

@@ -7,7 +7,7 @@ description: "Entreprendre à l'ère de l'IA - avec Vincent Godbert"
 
 Dans cet épisode, j'ai le plaisir de recevoir Vincent Godbert pour parler d'entrepreneuriat à l'ère de l'IA. Vincent dirige Elevation, un nouvel accélérateur de startups tech. Il nous partage sa vision de l'entrepreneuriat, la place de l'IA dans les nouvelles startups et comment l'utiliser comme levier opérationnel.
 
-Rejoins le Discord : [https://discord.gg/UvhcUyvbn](https://discord.gg/UvhcUyvbn)
+Rejoins le Discord : [https://generationia.xyz/discord](https://generationia.xyz/discord)
 
 Pour suivre Vincent sur LinkedIn : [https://www.linkedin.com/in/vincentgodbert/](https://www.linkedin.com/in/vincentgodbert/)
 
