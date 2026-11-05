@@ -1,0 +1,29 @@
+app/page.tsx
+  s_dafd9aef4e15db::t_227892dec2d005 121-141
+app/components/Footer.tsx
+  s_dafd9aef4e15db::t_4aeb24731b1607 9-12
+app/sitemap.ts
+  s_dafd9aef4e15db::t_c7d5acca9b6448 14
+lib/partners.ts
+  s_dafd9aef4e15db::t_31d934b2830ff3 1-89
+app/components/CopyEmail.tsx
+  s_dafd9aef4e15db::t_227a4a119ce48c 1-38
+app/partenariats/page.tsx
+  s_dafd9aef4e15db::t_ec687da42455a9 1-297
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "13bd498fed08b23241286ecb632283d9549eefdd",
+  "prompts": {},
+  "sessions": {
+    "s_dafd9aef4e15db": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2e6f1e6a-3b67-4980-ac02-3abaacc899b5",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
