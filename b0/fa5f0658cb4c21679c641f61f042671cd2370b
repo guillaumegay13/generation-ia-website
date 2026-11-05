@@ -1,0 +1,21 @@
+app/components/Footer.tsx
+  s_dafd9aef4e15db::t_2d8485203e3be1 10,13,16
+app/partenariats/page.tsx
+  s_dafd9aef4e15db::t_abd3bb2112bd1f 193-194,199
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b0fa5f0658cb4c21679c641f61f042671cd2370b",
+  "prompts": {},
+  "sessions": {
+    "s_dafd9aef4e15db": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "2e6f1e6a-3b67-4980-ac02-3abaacc899b5",
+        "model": "unknown"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
