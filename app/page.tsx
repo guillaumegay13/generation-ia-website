@@ -118,6 +118,27 @@ export default function Home() {
           </div>
         </div>
 
+        <div className="rise mb-8 flex flex-col gap-4 rounded-xl border border-[#6b4615] bg-linear-160 from-[#5a3a10] to-hero-deep to-70% px-5 py-4 [animation-delay:.12s] sm:flex-row sm:items-center">
+          <p className="text-[15px] leading-snug">
+            <b>Marque, expert ou passionné d&apos;IA ?</b>{" "}
+            <span className="text-white/75">Sponsorisez le podcast ou proposez un invité.</span>
+          </p>
+          <div className="flex shrink-0 gap-2.5 sm:ml-auto">
+            <Link
+              href="/partenariats"
+              className="inline-flex h-9 items-center rounded-full bg-accent px-4 text-sm font-extrabold text-accent-ink transition hover:scale-[1.03] hover:bg-accent-hover"
+            >
+              Partenariat
+            </Link>
+            <Link
+              href="/partenariats#contact"
+              className="inline-flex h-9 items-center rounded-full border border-white/45 px-4 text-sm font-bold transition hover:scale-[1.03] hover:border-foreground"
+            >
+              Proposer un invité
+            </Link>
+          </div>
+        </div>
+
         <div className="grid gap-6 pb-20 md:grid-cols-[minmax(0,1fr)_300px] md:gap-12">
           <section>
             <h2 className="mt-2 mb-3 text-2xl font-bold tracking-tight">Tous les épisodes</h2>
