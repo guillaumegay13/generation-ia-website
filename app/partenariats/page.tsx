@@ -190,12 +190,13 @@ export default function Partenariats() {
           title="Des invités qui font l'IA."
           sub="Chaque invité apporte sa crédibilité et son audience : votre marque est associée à ces conversations."
         >
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {/* Swipeable row on phones, grid from sm up. */}
+          <div className="-mx-4 flex snap-x snap-mandatory gap-3 overflow-x-auto px-4 pb-1 [scrollbar-width:none] sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-4 sm:overflow-visible sm:px-0 sm:pb-0 lg:grid-cols-3">
             {GUESTS.map((g) => (
               <Link
                 key={g.slug}
                 href={`/articles/${g.slug}`}
-                className="overflow-hidden rounded-xl bg-surface transition-colors hover:bg-surface-hover"
+                className="w-[78%] shrink-0 snap-start overflow-hidden rounded-xl bg-surface transition-colors hover:bg-surface-hover sm:w-auto"
               >
                 <Image
                   src={`https://i.ytimg.com/vi/${g.yt}/hqdefault.jpg`}
