@@ -16,7 +16,7 @@ Each episode is one file in `content/<slug>.md`. The homepage list and the artic
 ## SEO
 
 - Site constants (URL, RSS feed, host, description) live in `lib/site.ts`; don't hardcode them in pages.
-- `app/robots.ts` and `app/sitemap.ts` are generated from the episodes; nothing to update by hand.
+- `app/robots.ts`, `app/sitemap.ts` and `app/llms.txt/route.ts` (the LLM index at `/llms.txt`) are generated from the episodes; nothing to update by hand.
 - Every page sets `alternates: alternatesFor(path)` (canonical URL + RSS feed link). A page's `alternates` replaces the layout's, so always go through this helper.
 - JSON-LD: `PodcastSeries` on the homepage, `PodcastEpisode` (+ `VideoObject` when there is a YouTube video) on episode pages. Serialize with `jsonLd()`.
 
