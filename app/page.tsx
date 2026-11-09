@@ -7,7 +7,7 @@ import PlatformLinks, { BrandMark, COMMUNITY } from "./components/PlatformLinks"
 import TopBar from "./components/TopBar";
 import { pillClass, playButtonClass, wrapClass } from "./components/ui";
 import { formatDate, formatDuration, getAllEpisodes, thumbnailOf, type Episode } from "@/lib/episodes";
-import { HOST_LINKEDIN, HOST_NAME, RSS_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, jsonLd } from "@/lib/site";
+import { HOST_GITHUB, HOST_LINKEDIN, HOST_NAME, RSS_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, jsonLd } from "@/lib/site";
 import { PLATFORMS } from "./components/PlatformLinks";
 
 const ABOUT = SITE_DESCRIPTION;
@@ -67,7 +67,10 @@ function EpisodeRow({ ep, isLatest, index }: { ep: Episode; isLatest: boolean; i
 export default function Home() {
   const episodes = getAllEpisodes();
   const latest = episodes[0];
-  const [discord, linkedin] = COMMUNITY;
+  const community = (name: string) => COMMUNITY.find((p) => p.name === name)!;
+  const discord = community("Discord");
+  const socials = [community("TikTok"), community("Instagram")];
+  const hostLinks = [community("LinkedIn"), community("GitHub")];
   const hours = Math.round(episodes.reduce((sum, e) => sum + e.durationMin, 0) / 60);
 
   const series = {
@@ -79,8 +82,8 @@ export default function Home() {
     image: `${SITE_URL}/cover.jpg`,
     inLanguage: "fr-FR",
     webFeed: RSS_URL,
-    author: { "@type": "Person", name: HOST_NAME, sameAs: [HOST_LINKEDIN] },
-    sameAs: PLATFORMS.map((p) => p.url),
+    author: { "@type": "Person", name: HOST_NAME, sameAs: [HOST_LINKEDIN, HOST_GITHUB] },
+    sameAs: [...PLATFORMS, ...socials].map((p) => p.url),
     episode: episodes.slice(0, 10).map((e) => ({
       "@type": "PodcastEpisode",
       name: e.title,
@@ -168,6 +171,22 @@ export default function Home() {
               <BrandMark p={discord} colored />
               {discord.label}
             </a>
+            <div className="mt-2 grid grid-cols-2 gap-2">
+              {socials.map((p) => (
+                <a
+                  key={p.name}
+                  href={p.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={p.label}
+                  title={p.label}
+                  className="flex items-center justify-center gap-2 rounded-full bg-surface-hover px-3 py-2.5 text-sm font-bold transition-colors hover:bg-line"
+                >
+                  <BrandMark p={p} colored />
+                  {p.name}
+                </a>
+              ))}
+            </div>
             <div className="mt-5 flex items-center gap-3 border-t border-line pt-4">
               <Image
                 src="/cover.jpg"
@@ -180,16 +199,21 @@ export default function Home() {
                 <p className="text-sm font-bold">Guillaume Gay</p>
                 <p className="text-[13px] text-subdued">Hôte du podcast</p>
               </div>
-              <a
-                href={linkedin.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label={linkedin.label}
-                title={linkedin.label}
-                className="ml-auto grid size-10 place-items-center rounded-full transition-colors hover:bg-surface-hover"
-              >
-                <BrandMark p={linkedin} colored />
-              </a>
+              <div className="ml-auto flex">
+                {hostLinks.map((p) => (
+                  <a
+                    key={p.name}
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={p.label}
+                    title={p.label}
+                    className="grid size-10 place-items-center rounded-full transition-colors hover:bg-surface-hover"
+                  >
+                    <BrandMark p={p} colored />
+                  </a>
+                ))}
+              </div>
             </div>
           </aside>
         </div>
