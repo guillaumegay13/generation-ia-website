@@ -1,0 +1,23 @@
+app/components/PlatformLinks.tsx
+  s_f6f5a83e596d17::t_a1b507b53819e7 44-57,66-72
+app/page.tsx
+  s_f6f5a83e596d17::t_e1f56a1b872b2b 10,70-73,85-86,174-189,202-216
+lib/site.ts
+  s_f6f5a83e596d17::t_ea805279116206 10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "89deb3b7a79add2db822b349a87d73976fe1fd84",
+  "prompts": {},
+  "sessions": {
+    "s_f6f5a83e596d17": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "57790872-8aed-4e97-953b-46a8a49f572b",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
