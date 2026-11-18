@@ -1,0 +1,21 @@
+app/youtube.tsx
+  s_a044fa765e331e::t_6552ed20e259e5 4
+content/affaire-jensen-huang.md
+  s_a044fa765e331e::t_a86e7e55d1c80e 1-98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "345800b99e6694c19c1abc44bea71cbddb5001d2",
+  "prompts": {},
+  "sessions": {
+    "s_a044fa765e331e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "98a7fe3c-5d6f-4f49-94cf-0cb27e973451",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
