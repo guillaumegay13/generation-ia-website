@@ -1,6 +1,7 @@
 // YouTube video link per episode (slug -> watch URL).
 // Single source of truth shared by the homepage list and article pages.
 export const YOUTUBE_LINKS: Record<string, string> = {
+  "affaire-jensen-huang": "https://youtu.be/nGLa9pCtpB0",
   "annee-bascule-ia-2026": "https://youtu.be/nLQk8D2PzNI",
   "job-remplace-ia-christophe-aulnette": "https://youtu.be/VAGwFipj-o4",
   "ia-bouleverse-recherche-laurent-daudet": "https://youtu.be/8hwsQsmQ_1o",
