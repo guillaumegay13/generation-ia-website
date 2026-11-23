@@ -13,6 +13,8 @@ Rejoins le Discord : [https://generationia.xyz/discord](https://generationia.xyz
 
 Me contacter : [https://guillaumegay.pro](https://guillaumegay.pro)
 
+Réserver un appel gratuit de 20 min : [https://calendar.app.google/3E2Xf1vQtdY3vbE38](https://calendar.app.google/3E2Xf1vQtdY3vbE38)
+
 *Transcription brute générée automatiquement par Whisper — peut contenir des imprécisions.*
 
 ---
