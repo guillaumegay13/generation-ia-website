@@ -1,0 +1,21 @@
+app/youtube.tsx
+  s_a044fa765e331e::t_b87143275d6d5a 4
+content/merci-claude.md
+  s_a044fa765e331e::t_c3d82e74c77a5a 1-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "2ce189f8a75024913a8c9aa1404094683a0ac0dc",
+  "prompts": {},
+  "sessions": {
+    "s_a044fa765e331e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "98a7fe3c-5d6f-4f49-94cf-0cb27e973451",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Guillaume Gay <guillaume.gay@protonmail.com>"
+    }
+  }
+}
