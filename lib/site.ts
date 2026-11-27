@@ -8,6 +8,7 @@ export const HOST_NAME = "Guillaume Gay";
 export const CONTACT_EMAIL = "guillaume.gay@protonmail.com";
 export const HOST_LINKEDIN = "https://www.linkedin.com/in/guillaume-gay-aa0ba6133/";
 export const HOST_GITHUB = "https://github.com/guillaumegay13";
+export const HOST_X = "https://x.com/GuillaumeGay_";
 export const SITE_DESCRIPTION =
   "L'IA générative telle que ChatGPT est une nouvelle révolution telle que l'ont été l'électricité ou internet. Conseils pratiques, outils, actualités et impact sociétal.";
 

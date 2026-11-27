@@ -7,7 +7,7 @@ import PlatformLinks, { BrandMark, COMMUNITY } from "./components/PlatformLinks"
 import TopBar from "./components/TopBar";
 import { pillClass, playButtonClass, wrapClass } from "./components/ui";
 import { formatDate, formatDuration, getAllEpisodes, thumbnailOf, type Episode } from "@/lib/episodes";
-import { HOST_GITHUB, HOST_LINKEDIN, HOST_NAME, RSS_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, jsonLd } from "@/lib/site";
+import { HOST_GITHUB, HOST_LINKEDIN, HOST_NAME, HOST_X, RSS_URL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, jsonLd } from "@/lib/site";
 import { PLATFORMS } from "./components/PlatformLinks";
 
 const ABOUT = SITE_DESCRIPTION;
@@ -70,7 +70,7 @@ export default function Home() {
   const community = (name: string) => COMMUNITY.find((p) => p.name === name)!;
   const discord = community("Discord");
   const socials = [community("TikTok"), community("Instagram")];
-  const hostLinks = [community("LinkedIn"), community("GitHub")];
+  const hostLinks = [community("LinkedIn"), community("GitHub"), community("X")];
   const hours = Math.round(episodes.reduce((sum, e) => sum + e.durationMin, 0) / 60);
 
   const series = {
@@ -82,7 +82,7 @@ export default function Home() {
     image: `${SITE_URL}/cover.jpg`,
     inLanguage: "fr-FR",
     webFeed: RSS_URL,
-    author: { "@type": "Person", name: HOST_NAME, sameAs: [HOST_LINKEDIN, HOST_GITHUB] },
+    author: { "@type": "Person", name: HOST_NAME, sameAs: [HOST_LINKEDIN, HOST_GITHUB, HOST_X] },
     sameAs: [...PLATFORMS, ...socials].map((p) => p.url),
     episode: episodes.slice(0, 10).map((e) => ({
       "@type": "PodcastEpisode",
@@ -187,13 +187,13 @@ export default function Home() {
                 </a>
               ))}
             </div>
-            <div className="mt-5 flex items-center gap-3 border-t border-line pt-4">
+            <div className="mt-5 flex items-center gap-2 border-t border-line pt-4">
               <Image
                 src="/cover.jpg"
                 alt=""
                 width={44}
                 height={44}
-                className="size-11 rounded-full object-cover object-[70%_20%]"
+                className="size-11 shrink-0 rounded-full object-cover object-[70%_20%]"
               />
               <div>
                 <p className="text-sm font-bold">Guillaume Gay</p>
@@ -208,7 +208,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     aria-label={p.label}
                     title={p.label}
-                    className="grid size-10 place-items-center rounded-full transition-colors hover:bg-surface-hover"
+                    className="grid size-9 place-items-center rounded-full transition-colors hover:bg-surface-hover"
                   >
                     <BrandMark p={p} colored />
                   </a>
